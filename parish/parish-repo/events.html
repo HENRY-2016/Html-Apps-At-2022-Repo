@@ -1,0 +1,427 @@
+
+<?php session_start ();?>
+<html>
+<head>
+	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+	<title>| Events |</title>
+	<script src="static/js/jquery.min.js" ></script>
+	<script src="static/js/main.js"></script>
+	<link rel="stylesheet" type="text/css" href="static/css/main.css">
+	<link rel="stylesheet" type="text/css" href="static/css/w3.css">
+	<link rel="stylesheet" type="text/css" href="static/css/mediarules.css" >
+</head>
+
+<body class="main_body">	
+	<center>
+	<div id="main-screen-header"><!-- main-screen-header -->
+		<div class="popup" onclick="OpenPopUpLinks ('sub-navi-links-id')">
+			<button class="js-tool-tip-btn sub-navi-links-btn" >Level</button>
+			<span class=" js-popup-text-content popup-text-content-sub" id="sub-navi-links-id">
+				<label onclick="Show_Parish_Div ()" class="main-navi-links-label" >Parish</label>
+				<label onclick="Show_Ssisa_Div ()" class="main-navi-links-label" >Ssisa</label>
+				<label onclick="Show_Bweya_Div ()" class="main-navi-links-label" >Bweya</label>
+				<label onclick="Show_Lumuli_Div ()" class="main-navi-links-label" >Lumuli</label>
+				<label onclick="Show_Nganjo_Div ()" class="main-navi-links-label" >Nganjo</label>
+				<!-- <label onclick="Show_Akright_Div ()" class="main-navi-links-label" >Akright</label>
+				<label onclick="Show_Kabulamuliro_Div ()" class="main-navi-links-label" >Kabulamuliro</label> -->
+			</span>
+		</div><br>
+	</div><!-- main-screen-header -->
+	</center>
+	<br>
+	<div id="main-screen-content-body"> <!-- main-screen-body -->
+					<!-- 
+				@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+				@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+				@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+				@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+				@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+			-->
+			<div id="parish-div"> <!-- Begin bweya-div -->
+				<button type="button" class="request-btn">
+					St. Padre Pio Kabulamuliro Parish
+				</button><br><br>
+					<div class="user-view-area">
+						<center>
+							<div class="card-container-events">
+									<label> Date :: 26/10/2021</label><br>	
+									<label> Place :: Parish </label><br>	
+									<label> Time :: 10pm </label><br>	
+									<hr>
+									<label> details details </label><br>
+									<br>	
+							</div><br>
+
+							<div class="card-container-events">
+								<label> Date :: 26/10/2021</label><br>	
+								<label> Place :: Parish </label><br>	
+								<label> Time :: 10pm </label><br>	
+								<hr>
+								<label> details details </label><br>
+								<br>	
+							</div><br>
+
+							<div class="card-container-events">
+								<label> Date :: 26/10/2021</label><br>	
+								<label> Place :: Parish </label><br>	
+								<label> Time :: 10pm </label><br>	
+								<hr>
+								<label> details details </label><br>
+								<br>	
+							</div><br>
+						</center> 
+					</div><br><br>
+			</div><!-- End of parish-div -->
+
+			<div id="ssisa-div"> <!-- Begin bweya-div -->
+				<button type="button" class="request-btn">
+					St. Jude Ssisa Sub Parish
+				</button><br><br>
+					<div class="user-view-area">
+						<center>
+							<div class="card-container-events">
+								<label> Date :: 26/10/2021</label><br>	
+								<label> Place :: Parish </label><br>	
+								<label> Time :: 10pm </label><br>	
+								<hr>
+								<label> details details </label><br>
+								<br>	
+						</div><br>
+
+						<div class="card-container-events">
+							<label> Date :: 26/10/2021</label><br>	
+							<label> Place :: Parish </label><br>	
+							<label> Time :: 10pm </label><br>	
+							<hr>
+							<label> details details </label><br>
+							<br>	
+						</div><br>
+
+						<div class="card-container-events">
+							<label> Date :: 26/10/2021</label><br>	
+							<label> Place :: Parish </label><br>	
+							<label> Time :: 10pm </label><br>	
+							<hr>
+							<label> details details </label><br>
+							<br>	
+						</div><br> 
+					</div><br><br>
+			</div><!-- End of ssisa-div -->
+
+			<!-- 
+				@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+				@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+				@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+				@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+				@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+			-->
+			<div id="bweya-div"> <!-- Begin bweya-div -->
+				<button type="button" class="request-btn">
+					St. Francis-Xavier Bweya Sub Parish
+				</button><br><br>
+					<div class="user-view-area">
+						<center>
+							<div class="card-container-events">
+								<label> Date :: 26/10/2021</label><br>	
+								<label> Place :: Parish </label><br>	
+								<label> Time :: 10pm </label><br>	
+								<hr>
+								<label> details details </label><br>
+								<br>	
+							</div><br>
+
+							<div class="card-container-events">
+								<label> Date :: 26/10/2021</label><br>	
+								<label> Place :: Parish </label><br>	
+								<label> Time :: 10pm </label><br>	
+								<hr>
+								<label> details details </label><br>
+								<br>	
+							</div><br>
+
+							<div class="card-container-events">
+								<label> Date :: 26/10/2021</label><br>	
+								<label> Place :: Parish </label><br>	
+								<label> Time :: 10pm </label><br>	
+								<hr>
+								<label> details details </label><br>
+								<br>	
+							</div><br>
+						</center> 
+					</div><br><br>
+			</div><!-- End of bweya-div -->
+			
+			<!-- 
+				@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+				@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+				@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+				@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+				@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+			-->
+			<div id="lumuli-div"> <!-- Begin lumuli-div -->
+				<button type="button" class="request-btn">
+					St. Edward Lumuli Sub Parish
+				</button><br><br>
+					<div class="user-view-area">
+						<center>
+							<div class="card-container-events">
+								<label> Date :: 26/10/2021</label><br>	
+								<label> Place :: Parish </label><br>	
+								<label> Time :: 10pm </label><br>	
+								<hr>
+								<label> details details </label><br>
+								<br>	
+							</div><br>
+
+							<div class="card-container-events">
+								<label> Date :: 26/10/2021</label><br>	
+								<label> Place :: Parish </label><br>	
+								<label> Time :: 10pm </label><br>	
+								<hr>
+								<label> details details </label><br>
+								<br>	
+							</div><br>
+
+							<div class="card-container-events">
+								<label> Date :: 26/10/2021</label><br>	
+								<label> Place :: Parish </label><br>	
+								<label> Time :: 10pm </label><br>	
+								<hr>
+								<label> details details </label><br>
+								<br>	
+							</div><br>
+						</center> 
+					</div><br><br>
+			</div><!-- End of lumuli-div -->
+			<!-- 
+				@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+				@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+				@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+				@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+				@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+			-->
+			<div id="nganjo-div"> <!-- Begin nganjo-div -->
+				<button type="button" class="request-btn">
+					St. Donozio Nganjo Sub Parish
+				</button><br><br>
+					<div class="user-view-area">
+						<center>
+							<div class="card-container-events">
+								<label> Date :: 26/10/2021</label><br>	
+								<label> Place :: Parish </label><br>	
+								<label> Time :: 10pm </label><br>	
+								<hr>
+								<label> details details </label><br>
+								<br>	
+							</div><br>
+
+							<div class="card-container-events">
+								<label> Date :: 26/10/2021</label><br>	
+								<label> Place :: Parish </label><br>	
+								<label> Time :: 10pm </label><br>	
+								<hr>
+								<label> details details </label><br>
+								<br>	
+							</div><br>
+
+							<div class="card-container-events">
+								<label> Date :: 26/10/2021</label><br>	
+								<label> Place :: Parish </label><br>	
+								<label> Time :: 10pm </label><br>	
+								<hr>
+								<label> details details </label><br>
+								<br>	
+							</div><br>
+						</center> 
+					</div><br><br>
+			</div><!-- End of nganjo-div -->
+			<!-- 
+				@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+				@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+				@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+				@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+				@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+			-->
+			<div id="akright-div"> <!-- Begin bweya-div -->
+				<button type="button" class="request-btn">
+					St. Francis of Assisi Akright Sub Parish
+				</button><br><br>
+					<div class="user-view-area">
+						<center>
+							<div class="card-container-events">
+								<label> Date :: 26/10/2021</label><br>	
+								<label> Place :: Parish </label><br>	
+								<label> Time :: 10pm </label><br>	
+								<hr>
+								<label> details details </label><br>
+								<br>	
+							</div><br>
+
+							<div class="card-container-events">
+								<label> Date :: 26/10/2021</label><br>	
+								<label> Place :: Parish </label><br>	
+								<label> Time :: 10pm </label><br>	
+								<hr>
+								<label> details details </label><br>
+								<br>	
+							</div><br>
+
+							<div class="card-container-events">
+								<label> Date :: 26/10/2021</label><br>	
+								<label> Place :: Parish </label><br>	
+								<label> Time :: 10pm </label><br>	
+								<hr>
+								<label> details details </label><br>
+								<br>	
+							</div><br>
+						</center> 
+					</div><br><br>
+			</div><!-- End of akright-div -->
+			<!-- 
+				@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+				@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+				@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+				@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+				@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+			-->
+			<div id="kabulamuliro-div"> <!-- Begin bweya-div -->
+				<button type="button" class="request-btn">
+					St. Alifonse Kabulamuliro Sub Parish
+				</button><br><br>
+					<div class="user-view-area">
+						<center>
+							<div class="card-container-events">
+								<label> Date :: 26/10/2021</label><br>	
+								<label> Place :: Parish </label><br>	
+								<label> Time :: 10pm </label><br>	
+								<hr>
+								<label> details details </label><br>
+								<br>	
+							</div><br>
+
+							<div class="card-container-events">
+								<label> Date :: 26/10/2021</label><br>	
+								<label> Place :: Parish </label><br>	
+								<label> Time :: 10pm </label><br>	
+								<hr>
+								<label> details details </label><br>
+								<br>	
+							</div><br>
+
+							<div class="card-container-events">
+								<label> Date :: 26/10/2021</label><br>	
+								<label> Place :: Parish </label><br>	
+								<label> Time :: 10pm </label><br>	
+								<hr>
+								<label> details details </label><br>
+								<br>	
+							</div><br>
+						</center> 
+					</div><br><br>
+			</div><!-- End of lumuli-div -->
+</div><!-- main-screen-body -->
+<script>
+	function Open_User_Settings () {document.getElementById('id01').style.display='block';}
+</script>
+<div id="id01" class="w3-modal">
+	<div class="w3-modal-content w3-animate-top w3-card-4">
+		<div class="w3-container">
+		<br>
+		<center><br>
+			<div class="leader-details"><br>
+				<label>Details Setup</label><br>
+				<form id="user-details-form" >
+					<input style="display: none;"  type="text" name="id" value="
+						<?php if(isset($_SESSION['user_name'])) : 
+						$id = $_SESSION['id'];
+						echo $id;
+						endif 
+						?>">
+					
+					<label>Contact</label>
+					<input type="text" name="contact" maxlength="10" oninput="this.value = this.value.replace(/[^0-9.]/g, '')" class="html-form-inputs" autocomplete="off" placeholder="0777777777" required="required">
+					<label>Community</label>
+					<input type="text" name="community" class="html-form-inputs" autocomplete="off" placeholder="St.aaa" required="required">
+					<button type="submit" onabort="UpdateUserDetails ()"  class="login-btn logout-login-regester-btns-fontstyle">Submit</button><br><br>
+				</form>
+			</div><br>
+			
+			<div class="leader-details"><br>
+				<label>Change Password</label><br>
+				<form id="password-form">
+					<input style="display:none;"  type="text" name="id" value="
+						<?php if(isset($_SESSION['user_name'])) : 
+						$id = $_SESSION['id'];
+						echo $id;
+						endif 
+						?>"><br>
+					<label>Password</label>
+					<!-- <input type="password" name="password" class="html-form-inputs" autocomplete="off" required="required" placeholder="New Password">
+					<label>Confirm password</label> -->
+					<input type="password" name="confirm_password" class="html-form-inputs" autocomplete="off" placeholder="Confirm Password" required="required">
+					<button type="submit" onclick="UpdateUserPassword ()"  class="login-btn logout-login-regester-btns-fontstyle">Submit</button><br><br>
+				</form>
+			</div>
+
+			<br>
+			<div class="leader-details"><br>
+				<div id="success-div" class="w3-panel post-success-feedback">
+					<p>Success!</p>
+					<p>Password :: Updated Very Well </p>
+				</div><br>
+				<div id="error-div" class="w3-panel post-error-feedback">
+					<p>An Error!</p>
+					<label id="post-error-label-feedback" class="post-error-label-feedback"></label>
+				</div><br>
+			</div>
+        </center><br>
+		<button  onclick="document.getElementById('id01').style.display='none';" type="button" class="close-popup-label" >Close</button><br>
+		</div>		
+	</div>
+</div>
+<div id="id020" class="w3-modal">
+	<div class="w3-modal-content w3-animate-top w3-card-4">
+		<div class="w3-container">
+		<br>
+		<center><br>
+			<label id="offline-lable" class="offline-lable" > Check Connection <br> 
+			</label>
+        </center><br><br>
+		<button  onclick="document.getElementById('id020').style.display='none';" type="button" class="close-popup-label" >Close</button><br>
+		</div>		
+	</div>
+</div>
+</body>
+<script>
+// When the user clicks on div, open the popup
+function OpenPopUpLinks (id, popup_text_contentId) 
+{
+	// CloseCurrentPopUpLinksWidow (popup_text_contentId); 
+
+	var popup = document.getElementById(id);
+	popup.classList.toggle("show");
+}
+
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) 
+{
+	if (!event.target.matches('.js-tool-tip-btn')) 
+	{
+	var dropdowns = document.getElementsByClassName("js-popup-text-content");
+	var i;
+	for (i = 0; i < dropdowns.length; i++) {
+		var openDropdown = dropdowns[i];
+		if (openDropdown.classList.contains('show')) {
+		openDropdown.classList.remove('show');
+		}
+	}
+	}
+}
+
+</script>
+</html>
+
+

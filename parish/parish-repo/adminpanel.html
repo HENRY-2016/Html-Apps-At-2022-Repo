@@ -1,0 +1,187 @@
+<?php session_start ();?>
+<html>
+<head>
+	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+	<title>| Admin |</title>
+	<script src="static/js/jquery.min.js" ></script>
+	<script src="static/js/crud.js"></script>
+	<link rel="stylesheet" type="text/css" href="static/css/main.css">
+	<link rel="stylesheet" type="text/css" href="static/css/w3.css">
+	<link rel="stylesheet" type="text/css" href="static/css/mediarules.css" >
+<script>
+	function Initialize ()
+	{
+		CreateCustomerBookingDynamicStatusTable (donations_status_url,"status-table-data-id-tab-1","statusdivtag-1")
+
+	}
+</script>
+</head>
+
+<body class="main_body">
+
+    <br><br>
+    <center>
+        <label onclick="document.getElementById('id02').style.display='block'" class="make-order-label-btn-close">Archive</label><br>
+        <label onclick="document.getElementById('id01').style.display='block'" class="make-order-label-btn-close">Collections</label><br>
+
+    </center>
+    <br><br>
+    <div id="id01" class="w3-modal">
+        <div class="w3-modal-content w3-animate-top w3-card-4">
+            <div class="w3-booking-details-container">
+                <br>
+                <center>
+                    <form autocomplete="off" id="booking-form" ><br>
+                        
+                        <div class="person-details-container">
+                            
+                            <br>
+                            <label class="booking-form-input-labels">Date</label>
+                            <input type="date" required class="booking-inputs"><br>
+                            
+                            <label class="booking-form-input-labels">Level</label>
+                            <select class="booking-inputs"> 
+                                <option value="Parish"> Parish</option>
+                                <option value="Ssisa"> Ssisa</option>
+                                <option value="Bweya">Bweya</option>
+                                <option value="Lumuli">Lumuli</option>
+                                <option value="Nganjo"> Nganjo</option>
+                            </select><br>
+
+                            <hr>
+                            <label class="booking-form-input-labels">Time</label>
+                            <select class="booking-inputs"> 
+                                <option value="7:00 am">7:00 am</option>
+                                <option value="9:00 am">9:00 am</option>
+                                <option value="11:00 am">11:00 am</option>
+                                <option value="5:00 pm">5:00 pm</option>
+                            </select><br>
+
+                            <label class="booking-form-input-labels"> 1 Collection</label>
+                            <input type="text" placeholder="Amount" required class="booking-inputs">
+                            
+                            <label class="booking-form-input-labels">2 Collection</label>
+                            <input type="text" placeholder="Amount" required class="booking-inputs">
+                            
+                            
+                        </div>
+                        <div class="booking-details-container">
+                            <div class='element' id='div_1'>
+                                
+                            </div>
+                        </div><br>
+    
+                        <span class='add'>
+                            <label class="make-order-label-btn-add-more" onclick="">More </label>
+                        </span><br>
+                        <span>
+                            <label class="make-order-label-btn-add-more">Next</label><br>
+                            <!-- <label class="make-order-label-btn-add-more" onclick="Display_Customer_Booking_Details ()">Next</label><br> -->
+                        </span>
+                    </form>
+                <button  onclick="document.getElementById('id01').style.display='none'" type="button" class="make-order-label-cancel" >Cancel</button><br>
+            </center>
+            </div>		
+        </div>
+    </div>
+
+    <div id="id02" class="w3-modal">
+        <div class="w3-modal-content w3-animate-top w3-card-4">
+            <div class="w3-booking-details-container">
+                <br>
+                <center>
+                    <form autocomplete="off" id="booking-form" ><br>
+                        
+                        <div class="person-details-container">
+                            
+                            <br>
+                            <label class="booking-form-input-labels">Date</label>
+                            <input type="date" required class="booking-inputs"><br>
+                            
+                            <label class="booking-form-input-labels">Level</label>
+                            <select class="booking-inputs"> 
+                                <option value="Parish"> Parish</option>
+                                <option value="Ssisa"> Ssisa</option>
+                                <option value="Bweya">Bweya</option>
+                                <option value="Lumuli">Lumuli</option>
+                                <option value="Nganjo"> Nganjo</option>
+                            </select><br>
+
+                            <label class="booking-form-input-labels"> Title </label>
+                            <input type="text" placeholder="heading" required class="booking-inputs">
+                            
+                            <label class="booking-form-input-labels">Body</label>
+                            <input type="text" placeholder="body text" required class="booking-inputs">
+                            
+                        </div>    
+                        <span>
+                            <label class="make-order-label-btn-add-more">Next</label><br>
+                        </span>
+                    </form>
+                <button  onclick="document.getElementById('id02').style.display='none'" type="button" class="make-order-label-cancel" >Cancel</button><br>
+            </center>
+        </div>
+    </div>
+<script>
+    let DynamicSelection =
+                        '<label class="booking-form-input-labels">Time</label>'+
+                            '<select class="booking-inputs"> '+
+                                '<option value="7:00 am">7:00 am</option>'+
+                                '<option value="9:00 am">9:00 am</option>'+
+                                '<option value="11:00 am">11:00 am</option>'+
+                                '<option value="5:00 pm">5:00 pm</option>'+
+                            '</select><br>'+
+
+                        '<label class="booking-form-input-labels"> 1 Collection</label>'+
+                        '<input type="text" placeholder="Amount" required class="booking-inputs">'+
+                    
+                        '<label class="booking-form-input-labels">2 Collection</label>'+
+                        '<input type="text" placeholder="Amount" required class="booking-inputs">';
+                            
+
+    $(document).ready(function()
+    {
+    
+            // Add new element
+        $(".add").click(function()
+        {
+    
+            // Finding total number of elements added
+            let total_element = $(".element").length;
+    
+            // last <div> with element class id
+            let lastid = $(".element:last").attr("id");
+            let split_id = lastid.split("_");
+            let nextindex = Number(split_id[1]) + 1;
+            // let event = 'event';
+            let max = 4;
+            // Check total number elements
+            if(total_element < max )
+            {
+                // Adding new div booking-details-container after last occurance of element class
+                $(".element:last").after("<div class='element' id='div_"+ nextindex +"'></div>");
+    
+                // Adding element to <div>
+                // $("#div_" + nextindex).append("<input type='text' placeholder='Enter your skill' id='txt_"+ nextindex +"'>&nbsp;<span id='remove_" + nextindex + "' class='remove'>X</span>");
+                let DynamicDatesInputs = 
+                        "<label span id='remove_" + nextindex + "' class='remove remove-dynamic-div-lable' >Remove</label><br><br>";
+                            
+                $("#div_" + nextindex).append(DynamicSelection+ DynamicDatesInputs);
+    
+            }
+        });
+    
+        // Remove element
+        $('.booking-details-container').on('click','.remove',function()
+        {
+            let id = this.id;
+            let split_id = id.split("_");
+            let deleteindex = split_id[1];
+    
+            // Remove <div> with id
+            $("#div_" + deleteindex).remove();
+        }); 
+    });
+    </script>
+</body>
+</html>

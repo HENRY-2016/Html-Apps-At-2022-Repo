@@ -1,0 +1,982 @@
+
+
+.main_body
+{
+    /* background-color:  #222222; */
+    /* background-color:  #BDBDD7; */
+    background: rgba( 83, 84, 116, 0.80 );
+    /* margin-bottom: 0px; */
+
+    /* background: rgba( 180, 212, 247, 0.75 ); */
+    /* background: rgba( 180, 212, 247, 0.60 ); */
+}
+
+.offline-lable
+{
+    font-size: 18px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family:Times New Roman Times, serif;
+    color: red;
+}
+.html-form-inputs
+    {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    outline: none;
+    display: block;
+    width: 200px;
+    padding: 7px;
+    border: none;
+    border-bottom: 2px solid#317873;
+    background: transparent;
+    margin-bottom: 10px;
+    font: 16px Arial, Helvetica, sans-serif;
+    height: 35px;
+
+}
+/*=======================================================================================================*/
+                                            /*
+                                               +++++++++++++++++++++++++ ++
+                                               +                          +
+                                               +   index PAGE             +
+                                               +                          +
+                                               ++++++++++++++++++++++++++++
+                                            */
+
+
+.index-page-btn-container 
+{
+    width: 50%;
+    margin-top: 50%;
+    margin-bottom: 50%;
+}
+
+#leader-ship-div {display: none;}
+/*=======================================================================================================*/
+                                            /*
+                                               +++++++++++++++++++++++++ ++
+                                               +                          +
+                                               +   accounts PAGES             +
+                                               +                          +
+                                               ++++++++++++++++++++++++++++
+                                            */
+
+#expenditures-div,#saving-div,#administrative-div{display: none;}
+#title-label-year-selection-div
+{
+    background-color:whitesmoke;
+    width:28%;
+    height:40px;
+    border-top-left-radius: 30px;
+	border-top-right-radius:30px;
+    color: blue;
+}
+
+.request-label-btn
+{
+    color: blue;
+    padding-left: 18px;
+    font-weight: bold;
+    font-family:Times New Roman Times, serif;
+    border: none;
+    border-top-left-radius: 40px;
+}
+
+.user-total-label-btn
+{
+    border: none;
+    background-color: inherit;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 18px;
+    font-family:Times New Roman Times, serif;
+    color: blue;
+}
+.user-total-label-btn:hover{background-color: whitesmoke;}
+.user-total-label
+{
+    color: blue;
+    font-weight: bold;
+    font: 18px;
+    font-family:Times New Roman Times, serif;
+}
+.year-selection-inputs
+{
+    box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	outline: none;
+	display: block;
+	width: 100;
+	border: none;
+    margin-left: 15px;
+	border-bottom: 2px solid blue;
+	background: transparent;
+	height: 35px;
+
+}
+.year-selection-inputs:focus{border-bottom: 2px solid black;}
+table 
+{
+    border-collapse: collapse;
+    width: 100%;
+}
+th, td {
+    padding: 8px;
+    text-align: left;
+    /* border-bottom: 1px solid #ddd; */
+    border-bottom: 1px solid blue;
+}
+
+.table-thead
+{
+    /* background-color:#4CAF50; */
+    background-color:#eaeafb;
+}
+/* .table-caption
+{
+    color: blue;
+    font-weight:normal;
+    font-size: 18px;
+    font-family:Times New Roman Times, serif;
+} */
+.table-thead-th
+{
+    color: black;
+    font-size: 18px;
+    font-family:Times New Roman Times, serif;
+}
+.table-row-td
+{
+    font-size: 16px;
+    font-family:Times New Roman Times, serif;
+}
+.table-row:hover
+{
+    background-color: whitesmoke;
+    cursor: pointer;
+}
+
+#summary-table
+{
+    margin-left: -20px;
+}
+#expenditure-final-total-id,#savings-final-total-id,#fees-final-total-id,#pavers-pledges-balance
+#pavers-pledges-final-total-id,#pavers-pledges-received-final-total-id,#sugarcane-final-total-id
+{display: none;}
+
+.grand-total-input
+{
+	width: 200;
+	padding: 7px;
+    border: none;
+	border-bottom-left-radius: 18px;
+	border-bottom-right-radius: 18px;
+	border-bottom: 6px solid blue;
+	/* background: transparent; */
+    background: whitesmoke;
+    text-align: center;
+	margin-bottom: 10px;
+    color: black;
+    font-size: 18px;
+	height: 35px;
+    font-family:Times New Roman Times, serif;
+}
+.selecte-options-btn-links,.selecte-options-btn,
+.selecte-options-btn-links-expenditure
+{
+    height:40px;
+    background-color:whitesmoke;
+    color: blue;
+    font-weight: bold;
+    font-family:Times New Roman Times, serif;
+    border:none;
+    border-top-left-radius: 30px;
+	border-top-right-radius:30px;
+    border-bottom-left-radius: 30px;
+	border-bottom-right-radius:30px;
+}
+.selecte-options-btn-title
+{
+    height:40px;
+    background-color:whitesmoke;
+    color: blue;
+    font-weight: bold;
+    font-family:Times New Roman Times, serif;
+    border:none;
+    margin-left: 10px;
+    margin-top: 80px;
+	border-top-right-radius:30px;
+	border-bottom-right-radius:30px;
+}
+.selecte-options-btn {width:20%;}
+.selecte-options-btn-links {width:25%;}
+.selecte-options-btn-links-expenditure {width:35%;}
+
+.close-popup-label
+{
+    color: white;
+    font-size: 18px;
+    font-family:Times New Roman Times, serif;
+
+    background: blue;
+    text-decoration:none;
+    transition:0.3s;
+    border: none;
+    width: 100%;
+    display:block;
+    text-align: center;
+    padding:10px 10px;
+    border-bottom-left-radius:10px;
+    border-bottom-right-radius:10px;
+    border-top-left-radius:10px;
+    border-top-right-radius:10px;
+
+}
+.close-popup-label:hover {background: #090057;}
+
+/*=======================================================================================================*/
+                                            /*
+                                               +++++++++++++++++++++++++ ++
+                                               +                          +
+                                               +   index page   +
+                                               +                          +
+                                               ++++++++++++++++++++++++++++
+                                            */
+
+.make-order-label
+{
+    color:white;
+    background-color:#317873;
+    text-decoration:none;
+    transition:0.3s;
+    width: 80%;
+    display:block;
+    text-align: center;
+    padding:10px 10px;
+    border-radius: 10px;
+}
+#informention-img-pics
+{
+    width: 50%;
+}
+.leader-details
+{
+    background-color: whitesmoke;
+    border-bottom-left-radius:10px;
+    border-bottom-right-radius:10px;
+    border-top-left-radius:10px;
+    border-top-right-radius:10px;
+    width: 65%;
+
+    font-size: 18px;
+    color:blue;
+    font-family:Times New Roman Times, serif;
+}
+
+.leaders-img
+{
+    width: 28%;
+    height: 25%;
+    border-radius: 50%;
+}
+/*=======================================================================================================*/
+                                            /*
+                                               +++++++++++++++++++++++++ ++
+                                               +                          +
+                                               +   View Page              +
+                                               +                          +
+                                               ++++++++++++++++++++++++++++
+                                            */
+
+
+
+.js_table_headers
+{
+    background-color:#4CAF50;
+}
+
+.js_table_row
+{
+    background-color:#2196F3;
+    /* color: white; */
+    border-bottom:1px solid #ddd;
+    font-size: 18px;
+    font-weight:bold;
+    color:#E6E6FA;
+    font-family:Times New Roman Times, serif;
+
+}
+.js_table_row:hover
+{
+    background-color: black;
+    cursor: pointer;
+}
+
+
+
+
+/*=======================================================================================================*/
+                                            /*
+                                               +++++++++++++++++++++++++ ++
+                                               +                          +
+                                               +   View Page              +
+                                               +                          +
+                                               ++++++++++++++++++++++++++++
+                                            */
+
+.back-btn-label
+{
+    font-size: 20px;
+    font-weight:bold;
+    font-family:Times New Roman Times, serif;
+    color:white;
+}
+.back-btn
+{
+    background-color:black;
+    border:none;
+    width:45%;
+    height:50px;
+    border-radius:18px;
+
+    font-size: 20px;
+    font-weight:bold;
+    font-family:Times New Roman Times, serif;
+    color:white;
+}
+.update-delete-table{display: grid; grid-template-columns: auto auto;}
+
+.update-delete-btn
+{
+
+    background-color:whitesmoke;
+    color: black;
+    font-weight: bold;
+    font-family:Times New Roman Times, serif;
+    margin-bottom: 3%;
+    border:none;
+    width:20%;
+    height:40px;
+    border-radius:18px;
+    display: none;
+}
+.update-delete-btn:hover{background-color: inherit; color: red;}
+/*=======================================================================================================*/
+                                            /*
+                                               +++++++++++++++++++++++++ ++
+                                               +                          +
+                                               +   pleges Page              +
+                                               +                          +
+                                               ++++++++++++++++++++++++++++
+                                            */
+
+
+
+/* .pledges-table-caption
+{
+    padding-top: 10px;
+    background-color:whitesmoke;
+    width:18%;
+    border:none;
+    height:40px;
+    border-top-left-radius: 30px;
+	border-top-right-radius:30px;
+
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    font-family:Times New Roman Times, serif;
+    
+} */
+#sugarcanes-pledges-div
+{
+    display: none;
+}
+.balance-label
+{
+    color: blue;
+    font-size: 18px;
+    font-family:Times New Roman Times, serif;
+}
+/*=======================================================================================================*/
+                                            /*
+                                               +++++++++++++++++++++++++ ++
+                                               +                          +
+                                               +   Admin Page              +
+                                               +                          +
+                                               ++++++++++++++++++++++++++++
+                                            */
+
+#admin-view-details {display: none;}
+.admin-form-request-btn
+{
+    background-color:whitesmoke;
+    color: blue;
+    font-weight: bold;
+    font-family:Times New Roman Times, serif;
+    border:none;
+    width:20%;
+    height:40px;
+    border-top-left-radius: 30px;
+	border-top-right-radius:30px;
+}
+#add-member-panel-div,#add-expenditures-panel-div,#add-pledges-panel-div,
+#receive-pledges-panel-div,#add-fees-panel-div,#add-saving-panel-div
+{display: none;}
+
+#member-success-div,#pledges-success-div,#expense-success-div,#success-div,
+#receive-pledges-success-div,#fees-success-div,#saving-success-div
+{display: none;}
+
+#member-error-div,#pledges-error-div,#expense-error-div,#receive-pledges-error-div,
+#fees-error-div,#saving-error-div,#error-div
+{display: none;}
+
+/* delete page */
+#delete-username-success-div
+{display: none;}
+#delete-username-error-div
+{display: none;}
+
+.post-success-feedback
+{
+    background-color: cadetblue;
+    color: blue;
+    font-size: 18px;
+    font-family:Times New Roman Times, serif;
+}
+.post-error-label-feedback
+{
+    color: blue;
+    font-size: 18px;
+    font-family:Times New Roman Times, serif;
+}
+.post-error-feedback
+{
+    background-color:rosybrown;
+    color: blue;
+    font-size: 18px;
+    font-family:Times New Roman Times, serif;
+}
+.admin-form
+{
+ background-color:white;
+ width: 65%;
+ border-radius: 50px;
+}
+.form_input
+{
+    box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	outline: none;
+	display: block;
+	width: 50%;
+	padding: 7px;
+	border: none;
+	border-bottom: 2px solid blue;
+	background: transparent;
+	margin-bottom: 10px;
+	font: 16px Arial, Helvetica, sans-serif;
+	height: 45px;
+    text-align: center;
+
+}
+.form_input:focus {border-bottom: 2px solid black;}
+.message-response-label
+{
+    color:white;
+    background-color:#317873;
+    text-decoration:none;
+    transition:0.3s;
+    width: 30%;
+    display:block;
+    text-align: center;
+    padding:10px 10px;
+    border-radius: 10px;
+}
+
+
+
+
+.submit-btn
+{
+
+    background-color:#b4d4f7;
+    color: black;
+    font-weight: bold;
+    font-family:Times New Roman Times, serif;
+    margin-bottom: 3%;
+    border:none;
+    width:20%;
+    height:40px;
+    border-radius:18px;
+
+}
+
+.input-discription-labels {color: black;}
+.order-inputs
+{
+    box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	outline: none;
+	display: block;
+	width: 200;
+	padding: 7px;
+	border: none;
+	border-bottom: 2px solid blue;
+	background: transparent;
+	margin-bottom: 10px;
+	font: 16px Arial, Helvetica, sans-serif;
+	height: 35px;
+    /* text-align: center; */
+
+}
+.order-inputs:focus{border-bottom: 2px solid black;}
+
+
+
+/*=======================================================================================================*/
+                                            /*
+                                               +++++++++++++++++++++++++ ++
+                                               +                          +
+                                               +   User Guid Page         +
+                                               +                          +
+                                               ++++++++++++++++++++++++++++
+                                            */
+
+.user-guid-area-view,#services-slogan-title-div-with-out-tabs
+{background-color: #e6e6fa;}
+#services-slogan-title-div-with-out-tabs
+{
+    margin-top: 10px;
+    
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 7px;
+    padding-right: 7px;
+    text-align: center;
+
+    border-bottom-left-radius:25px;
+	border-top-left-radius:25px;
+    border-bottom-right-radius:25px;
+	border-top-right-radius:25px;
+}
+.services-slogan-title-label,.user-guid-labels
+{
+    color: blue;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.user-guid-labels
+{margin-left: 20px;}
+.user-guid-selecte-options-btn
+{
+    height:40px;
+    background-color:#222222;
+    color: whitesmoke;
+    font-weight: bold;
+    font-family:Times New Roman Times, serif;
+    border:none;
+    margin-left: 10px;
+    margin-top: 10px;
+	border-top-right-radius:30px;
+	border-bottom-right-radius:30px;
+}
+
+
+#ssisa-div,#bweya-div,#lumuli-div,
+#nganjo-div,#akright-div, #kabulamuliro-div
+{
+    display: none;
+}
+
+
+/*=======================================================================================================*/
+                                        /*
+                                            +++++++++++++++++++++++++ ++
+                                            +                          +
+                                            +         MAIN NAVIGETION  +
+                                            +                          +
+                                            ++++++++++++++++++++++++++++
+                                        */
+
+
+
+
+.sub-navi-links-btn,.card-container,.make-order-label-btn-add-more,
+.make-order-label-btn-close,.remove-dynamic-div-lable,.make-order-label-cancel,
+.card-container-events,.card-container-archive,.card-container-donotions
+{
+    border: none;
+    border-top-right-radius:30px;
+    border-bottom-right-radius:30px;
+    border-top-left-radius:30px;
+    border-bottom-left-radius:30px;
+}
+
+/* fonts */
+.sub-navi-links-btn,
+.main-navi-links-label
+{
+    font-size: 18px;
+    font-family:Times New Roman Times, serif;
+}
+
+.sub-navi-links-btn 
+{
+    height:40px;
+    background-color: #535474;
+    color:whitesmoke;
+}
+.sub-navi-links-btn  {width: 70%;}
+
+
+.main-navi-links-label { padding-bottom: 5px; padding-top: 5px; display: block;}
+/* Popup container - can be anything you want */
+.popup {position: relative;}
+
+  /* The actual popup */
+.popup .popup-text-content-main,.popup-text-content-sub 
+{
+    visibility: hidden;
+    /* background-color:#432C51; */
+    background-color: #535474;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    
+}
+.popup-text-content-main,.popup-text-content-sub 
+    {margin-top: -17px;margin-left: -90px;}
+.popup-text-content-main {top: 125%; left: 45%; width: 230px;}
+.popup-text-content-sub {top: 125%; left: 50%; width: 190px;}
+
+  /* Toggle this class - hide and show the popup */
+.popup .show 
+{
+    visibility: visible;
+    -webkit-animation: fadeIn 2s;
+    animation: fadeIn 2s;
+}
+
+.closspopup 
+{
+    visibility: hidden;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+  /* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn { from {opacity: 0;} to {opacity: 1;}}
+@keyframes fadeIn { from {opacity: 0;} to {opacity:1 ;}}
+
+#main-screen-header
+{
+    background-color: #8787A3;
+    position: fixed;
+    height: 50px;
+    width: 100%;
+}
+#main-screen-content-body
+{
+    margin-top: 35px;
+}
+
+
+
+/* ============================================ */
+.info 
+{
+    margin-bottom: 15px;
+    padding: 4px 12px;
+    background-color: #e7f3fe;
+    border-left: 6px solid #2196F3;
+}
+
+
+/* 
+    ================ leaders page
+*/
+
+.accordion 
+{
+    /* background-color: #eee; */
+    background: rgba( 31, 26, 54, 0.80 );
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    /* height: 100%; */
+    border: none;
+    text-align: left;
+    outline: none;
+    color: whitesmoke;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+    transition: 0.4s;
+}
+
+.active, .accordion:hover {background: rgba( 31, 26, 54, 0.50 );}
+
+.accordion:after 
+{
+    content: '\002B';
+    /* color: #777; */
+    color: whitesmoke;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {content: "\2212";}
+
+.panel 
+{
+    padding: 0 18px;
+    /* background-color: white; */
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+}
+
+.card-container,.card-container-events,.card-container-archive,
+.card-container-donotions
+{
+	background-color: #231E39;
+	box-shadow: 0px 10px 20px -10px rgba(0,0,0,0.75);
+	color: #B3B8CD;
+	padding-top: 30px;
+	max-width: 100%;
+}
+.card-container {width: 300px; text-align: center;}
+.card-container-events {width: 320px; padding-right: 20px; padding-left: 20px; text-align: left;}
+.card-container-archive {width: 90%; padding-right: 20px; padding-left: 20px; text-align: left;}
+.card-container-donotions {width: 60%; padding-right: 20px; padding-left: 20px; text-align: center;}
+.card-container .round 
+{
+    margin-top: -20px;
+	border: 1px solid #03BFCB;
+	border-radius: 50%;
+	padding: 7px;
+}
+
+
+.user-img {width: 100px;}
+
+
+.card-contects-div
+{
+	background-color: #1F1A36;
+	text-align: left;
+	padding: 15px;
+	margin-top: 30px;
+    border: none;
+    border-bottom-right-radius:30px;
+    border-bottom-left-radius:30px;
+}
+.phone-call-btn
+{
+    background-color:#317873;
+    color: white;
+    font-weight: bold;
+    /* margin-top: 4%; */
+    font-family:Times New Roman Times, serif;
+    margin-bottom: 3%;
+    border:none;
+    width:60%;
+    height:25px;
+    border-radius:18px;
+}
+a{text-decoration: none;}
+
+
+/* =============================== donations */
+.request-btn
+{
+    /* background-color:whitesmoke; */
+    /* background-color: #231E39; */
+    background: rgba( 35, 30, 57, 0.30 );
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 5px;
+    margin-left: 10px;
+    
+
+    color: whitesmoke;
+    font-weight: bold;
+    font-family:Times New Roman Times, serif;
+    border:none;
+    width:50%;
+    height:50px;
+    border-top-left-radius: 10px;
+	border-top-right-radius:10px;
+    border-bottom-left-radius: 10px;
+	border-bottom-right-radius:10px;
+
+}
+.user-control {margin-top: -20px;}
+.donate-sub-links-btn-left,.donate-sub-links-btn-right
+{
+    background-color:whitesmoke;
+    color: blue;
+    font-weight: bold;
+    font-family:Times New Roman Times, serif;
+    border:none;
+    width:20%;
+    height:40px;
+    border-top-left-radius: 20px;
+	border-top-right-radius:20px;
+    border-bottom-left-radius: 20px;
+	border-bottom-right-radius:20px;
+}
+.donate-sub-links-btn-left {float: left;}
+.donate-sub-links-btn-right {float: right;}
+
+.booking-form-heading
+{   
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: rgba( 83, 84, 116, 0.80 );
+}
+
+.booking-form-title-input-labels
+{
+    color: white;
+    font-size: 17px;
+    font-family:Times New Roman Times, serif;  
+}
+.booking-form-input-labels
+{
+    color: white;
+    font-size: 17px;
+    font-family:Times New Roman Times, serif;  
+}
+.post-booking-details-btn
+{
+    background-color:#317873;
+    color: white;
+    font-weight: bold;
+    /* margin-top: 4%; */
+    font-family:Times New Roman Times, serif;
+    margin-bottom: 3%;
+    border:none;
+    width:30%;
+    height:40px;
+    border-radius:18px;
+}
+.post-btn
+{
+    background-color:rgb(241, 111, 111);
+    color: white;
+    font-weight: bold;
+    font-family:Times New Roman Times, serif;
+    border:none;
+    width:100%;
+    height:40px;
+}
+.pop-up-confirmention-labels
+{
+    display: block;
+    color: white;
+	font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+}
+
+.booking-inputs
+{
+    box-sizing: border-box;
+	/* -webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box; */
+	outline: none;
+	display: block;
+    font-size: 16px;
+    color: white;
+	padding: 7px;
+	border: none;
+	border-bottom: 2px solid black;
+	background: transparent;
+	margin-bottom: 10px;
+	font-family: 'Times New Roman', Times, serif;
+	height: 35px;
+    /* text-align: center; */
+}
+.booking-inputs:focus{border-bottom: 2px solid white;}
+.make-order-label-btn-add-more,.make-order-label-cancel,
+.make-order-label-btn-close,.remove-dynamic-div-lable
+{
+    color:white;
+    font-size: 18px;
+    font-family:Times New Roman Times, serif;
+    background-color:rgba( 83, 84, 116, 0.80 );
+    text-decoration:none;
+    transition:0.3s;
+    display:block;
+    padding:10px 10px;
+    /* border:none; */
+}
+.remove-dynamic-div-lable {width: 20%;}
+.make-order-label-cancel {width: 90%;}
+.make-order-label-btn-add-more {width: 40%;}
+.make-order-label-btn-close {width: 90%;}
+#donations-div {display: none; margin-top: 30px;}
+#view-donations-div { margin-top: 35px;}
+
+
+
+.status-table
+{
+    width: 85%;
+    background-color: rgba( 83, 84, 116, 0.80 )
+}
+
+.status-table-tr {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid black;
+}
+.status-table-tr:hover {background-color: black;}
+.status-table-td
+{
+    font-size: 16px;
+	padding-left:10px;
+    color:#E6E6FA;
+    font-family:Times New Roman Times, serif;
+}
+.table-headings-tr
+{
+    background-color:#231E39;
+    color: white;
+    font-size: 16px;
+    font-family:Times New Roman Times, serif;
+}
+
+
+/* 
+============================= Events
+*/
+
+
+.user-view-area
+{
+	width:100%;
+	/* padding: 30px; */
+    /* margin-bottom: -100%; */
+}
+
+
+
+
+
+
+
+
