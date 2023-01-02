@@ -1,0 +1,1060 @@
+
+
+.main_body
+{
+    background-color:  #222222;
+    /* background-color:  #17223B; */
+    /* background: rgba( 180, 212, 247, 0.75 ); */
+    /* background: rgba( 180, 212, 247, 0.60 ); */
+}
+/* #main-body
+{
+    width: 100%;
+    height: 100%;
+} */
+/* #offline-div-lable 
+{
+    margin-top: 10px;display: none; 
+    background-color: #e6e6fa;
+} */
+.offline-lable
+{
+    font-size: 18px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-family:Times New Roman Times, serif;
+    color: red;
+}
+.html-form-inputs
+    {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    outline: none;
+    display: block;
+    width: 200px;
+    padding: 7px;
+    border: none;
+    border-bottom: 2px solid#317873;
+    background: transparent;
+    margin-bottom: 10px;
+    font: 16px Arial, Helvetica, sans-serif;
+    height: 35px;
+
+}
+/*=======================================================================================================*/
+                                            /*
+                                               +++++++++++++++++++++++++ ++
+                                               +                          +
+                                               +   index PAGE             +
+                                               +                          +
+                                               ++++++++++++++++++++++++++++
+                                            */
+
+.index-page-btns
+{
+    height:50px;
+    background-color:whitesmoke;
+    color: blue;
+    font-weight: bold;
+    font-family:Times New Roman Times, serif;
+    border:none;
+    width: 70%;
+	border-top-right-radius:30px;
+	border-bottom-right-radius:30px;
+    border-top-left-radius:30px;
+	border-bottom-left-radius:30px;
+}
+.index-page-btn-container 
+{
+    width: 50%;
+    margin-top: 50%;
+    margin-bottom: 50%;
+}
+
+#leader-ship-div {display: none;}
+/*=======================================================================================================*/
+                                            /*
+                                               +++++++++++++++++++++++++ ++
+                                               +                          +
+                                               +   accounts PAGES             +
+                                               +                          +
+                                               ++++++++++++++++++++++++++++
+                                            */
+
+#expenditures-div,#saving-div,#administrative-div{display: none;}
+#title-label-year-selection-div
+{
+    background-color:whitesmoke;
+    width:28%;
+    height:40px;
+    border-top-left-radius: 30px;
+	border-top-right-radius:30px;
+    color: blue;
+}
+
+.request-label-btn
+{
+    color: blue;
+    padding-left: 18px;
+    font-weight: bold;
+    font-family:Times New Roman Times, serif;
+    border: none;
+    border-top-left-radius: 40px;
+}
+
+.user-total-label-btn
+{
+    border: none;
+    background-color: inherit;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 18px;
+    font-family:Times New Roman Times, serif;
+    color: blue;
+}
+.user-total-label-btn:hover{background-color: whitesmoke;}
+.user-total-label
+{
+    color: blue;
+    font-weight: bold;
+    font: 18px;
+    font-family:Times New Roman Times, serif;
+}
+.year-selection-inputs
+{
+    box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	outline: none;
+	display: block;
+	width: 100;
+	border: none;
+    margin-left: 15px;
+	border-bottom: 2px solid blue;
+	background: transparent;
+	height: 35px;
+
+}
+.year-selection-inputs:focus{border-bottom: 2px solid black;}
+table 
+{
+    border-collapse: collapse;
+    width: 100%;
+}
+th, td {
+    padding: 8px;
+    text-align: left;
+    /* border-bottom: 1px solid #ddd; */
+    border-bottom: 1px solid blue;
+}
+
+.table-thead
+{
+    /* background-color:#4CAF50; */
+    background-color:#eaeafb;
+}
+.table-caption
+{
+    color: blue;
+    font-weight:normal;
+    font-size: 18px;
+    font-family:Times New Roman Times, serif;
+}
+.table-thead-th
+{
+    color: black;
+    font-size: 18px;
+    font-family:Times New Roman Times, serif;
+}
+.table-row-td
+{
+    font-size: 16px;
+    font-family:Times New Roman Times, serif;
+}
+.table-row:hover
+{
+    background-color: whitesmoke;
+    cursor: pointer;
+}
+
+#summary-table
+{
+    margin-left: -20px;
+}
+#expenditure-final-total-id,#savings-final-total-id,#fees-final-total-id,#pavers-pledges-balance
+#pavers-pledges-final-total-id,#pavers-pledges-received-final-total-id,#sugarcane-final-total-id
+{display: none;}
+
+.grand-total-input
+{
+	width: 200;
+	padding: 7px;
+    border: none;
+	border-bottom-left-radius: 18px;
+	border-bottom-right-radius: 18px;
+	border-bottom: 6px solid blue;
+	/* background: transparent; */
+    background: whitesmoke;
+    text-align: center;
+	margin-bottom: 10px;
+    color: black;
+    font-size: 18px;
+	height: 35px;
+    font-family:Times New Roman Times, serif;
+}
+.selecte-options-btn-links,.selecte-options-btn,
+.selecte-options-btn-links-expenditure
+{
+    height:40px;
+    background-color:whitesmoke;
+    color: blue;
+    font-weight: bold;
+    font-family:Times New Roman Times, serif;
+    border:none;
+    border-top-left-radius: 30px;
+	border-top-right-radius:30px;
+    border-bottom-left-radius: 30px;
+	border-bottom-right-radius:30px;
+}
+.selecte-options-btn-title
+{
+    height:40px;
+    background-color:whitesmoke;
+    color: blue;
+    font-weight: bold;
+    font-family:Times New Roman Times, serif;
+    border:none;
+    margin-left: 10px;
+    margin-top: 80px;
+	border-top-right-radius:30px;
+	border-bottom-right-radius:30px;
+}
+.selecte-options-btn {width:20%;}
+.selecte-options-btn-links {width:25%;}
+.selecte-options-btn-links-expenditure {width:35%;}
+
+.close-popup-label
+{
+    color: white;
+    font-size: 18px;
+    font-family:Times New Roman Times, serif;
+
+    background: blue;
+    text-decoration:none;
+    transition:0.3s;
+    border: none;
+    width: 100%;
+    display:block;
+    text-align: center;
+    padding:10px 10px;
+    border-bottom-left-radius:10px;
+    border-bottom-right-radius:10px;
+    border-top-left-radius:10px;
+    border-top-right-radius:10px;
+
+}
+.close-popup-label:hover {background: #090057;}
+
+/*=======================================================================================================*/
+                                            /*
+                                               +++++++++++++++++++++++++ ++
+                                               +                          +
+                                               +   index page   +
+                                               +                          +
+                                               ++++++++++++++++++++++++++++
+                                            */
+
+.make-order-label
+{
+    color:white;
+    background-color:#317873;
+    text-decoration:none;
+    transition:0.3s;
+    width: 80%;
+    display:block;
+    text-align: center;
+    padding:10px 10px;
+    border-radius: 10px;
+}
+#informention-img-pics
+{
+    width: 50%;
+}
+.leader-details
+{
+    background-color: whitesmoke;
+    border-bottom-left-radius:10px;
+    border-bottom-right-radius:10px;
+    border-top-left-radius:10px;
+    border-top-right-radius:10px;
+    width: 65%;
+
+    font-size: 18px;
+    color:blue;
+    font-family:Times New Roman Times, serif;
+}
+
+.leaders-img
+{
+    width: 28%;
+    height: 25%;
+    border-radius: 50%;
+}
+/*=======================================================================================================*/
+                                            /*
+                                               +++++++++++++++++++++++++ ++
+                                               +                          +
+                                               +   View Page              +
+                                               +                          +
+                                               ++++++++++++++++++++++++++++
+                                            */
+
+
+
+.js_table_headers
+{
+    background-color:#4CAF50;
+}
+
+.js_table_row
+{
+    background-color:#2196F3;
+    /* color: white; */
+    border-bottom:1px solid #ddd;
+    font-size: 18px;
+    font-weight:bold;
+    color:#E6E6FA;
+    font-family:Times New Roman Times, serif;
+
+}
+.js_table_row:hover
+{
+    background-color: black;
+    cursor: pointer;
+}
+
+
+
+
+/*=======================================================================================================*/
+                                            /*
+                                               +++++++++++++++++++++++++ ++
+                                               +                          +
+                                               +   View Page              +
+                                               +                          +
+                                               ++++++++++++++++++++++++++++
+                                            */
+
+.back-btn-label
+{
+    font-size: 20px;
+    font-weight:bold;
+    font-family:Times New Roman Times, serif;
+    color:white;
+}
+.back-btn
+{
+    background-color:black;
+    border:none;
+    width:45%;
+    height:50px;
+    border-radius:18px;
+
+    font-size: 20px;
+    font-weight:bold;
+    font-family:Times New Roman Times, serif;
+    color:white;
+}
+.update-delete-table{display: grid; grid-template-columns: auto auto;}
+
+.update-delete-btn
+{
+
+    background-color:whitesmoke;
+    color: black;
+    font-weight: bold;
+    font-family:Times New Roman Times, serif;
+    margin-bottom: 3%;
+    border:none;
+    width:20%;
+    height:40px;
+    border-radius:18px;
+    display: none;
+}
+.update-delete-btn:hover{background-color: inherit; color: red;}
+/*=======================================================================================================*/
+                                            /*
+                                               +++++++++++++++++++++++++ ++
+                                               +                          +
+                                               +   pleges Page              +
+                                               +                          +
+                                               ++++++++++++++++++++++++++++
+                                            */
+
+.request-btn
+{
+    background-color:whitesmoke;
+    color: blue;
+    font-weight: bold;
+    font-family:Times New Roman Times, serif;
+    border:none;
+    width:20%;
+    height:40px;
+    border-top-left-radius: 30px;
+	border-top-right-radius:30px;
+
+}
+
+.pledges-table-caption
+{
+    padding-top: 10px;
+    background-color:whitesmoke;
+    width:18%;
+    border:none;
+    height:40px;
+    border-top-left-radius: 30px;
+	border-top-right-radius:30px;
+
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    font-family:Times New Roman Times, serif;
+    
+}
+#sugarcanes-pledges-div
+{
+    display: none;
+}
+.balance-label
+{
+    color: blue;
+    font-size: 18px;
+    font-family:Times New Roman Times, serif;
+}
+/*=======================================================================================================*/
+                                            /*
+                                               +++++++++++++++++++++++++ ++
+                                               +                          +
+                                               +   Admin Page              +
+                                               +                          +
+                                               ++++++++++++++++++++++++++++
+                                            */
+
+#admin-view-details {display: none;}
+.admin-form-request-btn
+{
+    background-color:whitesmoke;
+    color: blue;
+    font-weight: bold;
+    font-family:Times New Roman Times, serif;
+    border:none;
+    width:20%;
+    height:40px;
+    border-top-left-radius: 30px;
+	border-top-right-radius:30px;
+}
+#add-member-panel-div,#add-expenditures-panel-div,#add-pledges-panel-div,
+#receive-pledges-panel-div,#add-fees-panel-div,#add-saving-panel-div
+{display: none;}
+
+#member-success-div,#pledges-success-div,#expense-success-div,#success-div,
+#receive-pledges-success-div,#fees-success-div,#saving-success-div
+{display: none;}
+
+#member-error-div,#pledges-error-div,#expense-error-div,#receive-pledges-error-div,
+#fees-error-div,#saving-error-div,#error-div
+{display: none;}
+
+/* delete page */
+#delete-username-success-div
+{display: none;}
+#delete-username-error-div
+{display: none;}
+
+.post-success-feedback
+{
+    background-color: cadetblue;
+    color: blue;
+    font-size: 18px;
+    font-family:Times New Roman Times, serif;
+}
+.post-error-label-feedback
+{
+    color: blue;
+    font-size: 18px;
+    font-family:Times New Roman Times, serif;
+}
+.post-error-feedback
+{
+    background-color:rosybrown;
+    color: blue;
+    font-size: 18px;
+    font-family:Times New Roman Times, serif;
+}
+.admin-form
+{
+ background-color:white;
+ width: 65%;
+ border-radius: 50px;
+}
+.form_input
+{
+    box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	outline: none;
+	display: block;
+	width: 50%;
+	padding: 7px;
+	border: none;
+	border-bottom: 2px solid blue;
+	background: transparent;
+	margin-bottom: 10px;
+	font: 16px Arial, Helvetica, sans-serif;
+	height: 45px;
+    text-align: center;
+
+}
+.form_input:focus {border-bottom: 2px solid black;}
+.message-response-label
+{
+    color:white;
+    background-color:#317873;
+    text-decoration:none;
+    transition:0.3s;
+    width: 30%;
+    display:block;
+    text-align: center;
+    padding:10px 10px;
+    border-radius: 10px;
+}
+
+
+.user-view-area
+{
+	width:100%;
+	padding: 30px;
+	background: #b4d4f7;
+    /* background-color: red; */
+	border-bottom-left-radius:30px;
+	border-bottom-right-radius:30px;
+
+}
+
+.submit-btn
+{
+
+    background-color:#b4d4f7;
+    color: black;
+    font-weight: bold;
+    font-family:Times New Roman Times, serif;
+    margin-bottom: 3%;
+    border:none;
+    width:20%;
+    height:40px;
+    border-radius:18px;
+
+}
+
+.input-discription-labels {color: black;}
+.order-inputs
+{
+    box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	outline: none;
+	display: block;
+	width: 200;
+	padding: 7px;
+	border: none;
+	border-bottom: 2px solid blue;
+	background: transparent;
+	margin-bottom: 10px;
+	font: 16px Arial, Helvetica, sans-serif;
+	height: 35px;
+    /* text-align: center; */
+
+}
+.order-inputs:focus{border-bottom: 2px solid black;}
+
+
+.admin-menu-btns
+{
+    background-color:#eaeafb;
+    border:none;
+    color:blue;
+    width:95%;
+    height:50px;
+    border-radius:18px;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+
+.grid-container-btns {display: grid;grid-template-columns: auto auto;}
+.grid-item-btns {padding-bottom: 10px;text-align: center;}
+
+#admin-members-view-id,#admin-member-details-view-id
+{display: none;}
+
+
+/*
+    @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+    @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+                        Styling Autocomplete
+    @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+    @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+*/
+.autocomplete 
+    {
+        /*the container must be positioned relative:*/
+        position: relative;
+        display: inline-block;
+    }
+.autocomplete-items 
+    {
+        color: white;
+        position: absolute;
+        border: 1px solid #d4d4d4;
+        border-bottom: none;
+        border-top: none;
+        z-index: 99;
+        /*position the autocomplete items to be the same width as the container:*/
+        top: 100%;
+        left: 0;
+        right: 0;
+    }
+.autocomplete-items div {
+    padding: 10px;
+    cursor: pointer;
+    background-color: black;
+    border-bottom: 1px solid #d4d4d4;
+    }
+.autocomplete-items div:hover { background-color: blue; }
+
+/*=======================================================================================================*/
+                                            /*
+                                               +++++++++++++++++++++++++ ++
+                                               +                          +
+                                               +   User Guid Page         +
+                                               +                          +
+                                               ++++++++++++++++++++++++++++
+                                            */
+
+.user-guid-area-view,#services-slogan-title-div-with-out-tabs
+{background-color: #e6e6fa;}
+#services-slogan-title-div-with-out-tabs
+{
+    margin-top: 10px;
+    
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 7px;
+    padding-right: 7px;
+    text-align: center;
+
+    border-bottom-left-radius:25px;
+	border-top-left-radius:25px;
+    border-bottom-right-radius:25px;
+	border-top-right-radius:25px;
+}
+.services-slogan-title-label,.user-guid-labels
+{
+    color: blue;
+    font-size: 18px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.user-guid-labels
+{margin-left: 20px;}
+.user-guid-selecte-options-btn
+{
+    height:40px;
+    background-color:#222222;
+    color: whitesmoke;
+    font-weight: bold;
+    font-family:Times New Roman Times, serif;
+    border:none;
+    margin-left: 10px;
+    margin-top: 10px;
+	border-top-right-radius:30px;
+	border-bottom-right-radius:30px;
+}
+
+/*=======================================================================================================*/
+                                        /*
+                                            +++++++++++++++++++++++++ ++
+                                            +                          +
+                                            +         MAIN NAVIGETION  +
+                                            +                          +
+                                            ++++++++++++++++++++++++++++
+                                        */
+
+
+.close-navi-span
+{
+    background-color:#1b4d3e;
+    border-radius: 60px;
+    color:white;
+    font-style: bold;
+}
+.our-label-menu
+{
+    color:blue;
+    text-decoration:none;
+    transition:0.3s;
+    display:block;
+    padding:10px 10px;
+    background-color: wheat;
+    border-radius: 10px;
+}
+
+.header
+{
+    position: fixed;
+    height: 100%;
+    width: 0;
+    padding-top: 60px;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    transition: 0.5s;
+    background-color:#78a494;
+}
+
+.header .closebtn
+{
+    position:absolute;
+    right: 2px;
+    margin-left:50px;
+    top:0;
+    font-size:30px;
+}
+/* #menu-items-div
+{
+    background-color:#a21369;
+    border-radius: 10px;
+} */
+
+
+#NaviDiv
+{
+    /* background-color:#947f18; */
+    background-color:#dcdcdc;
+    height:53px;
+    /* /* position: relative;
+    overflow: hidden; */
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px; 
+}
+
+#our-avenues-menu-label-div
+{
+    /* background-color: white; */
+    border-radius: 10px;
+    color:white;
+    text-decoration:none;
+    transition:0.3s;
+    text-align: center;
+    display:block;
+    padding:5px 5px;
+    font-size: 20px;
+    font-family:Times New Roman Times, serif;
+}
+
+.open-side-navi-label
+{
+    font-size:35px;
+    cursor:pointer;
+    margin-left: 8px;
+    color:#006400;
+}
+.navigetion-content-labels
+{
+    color:white;
+    text-decoration:none;
+    transition:0.3s;
+    display:block;
+    padding:5px 5px;
+    font-size: 20px;
+    font-family:Times New Roman Times, serif;
+}
+
+
+
+.results-div-container
+{
+    background-color: white;
+}
+.results-div-container
+{
+    padding-left: 15px;
+}
+
+.post-btn
+{
+    background-color: rosybrown;
+    color: white;
+    font-weight: bold;
+    /* margin-top: 4%; */
+    font-family:Times New Roman Times, serif;
+    margin-bottom: 3%;
+    border:none;
+    width:100%;
+    height:40px;
+    border-radius:18px;
+}
+
+/* .sticky-header {padding: 2px 2px;}
+.sticky {position: fixed;top: 0; width: 100%;}
+.sticky {padding-top: 50px;}
+
+.send-msg-btn
+{
+    background-color:#317873;
+    color: white;
+    font-weight: bold;
+    font-family:Times New Roman Times, serif;
+    margin-bottom: 3%;
+    border:none;
+    width:20%;
+    height:40px;
+    border-radius:18px;
+} */
+
+
+/* 
+    =====================>>>>>> SUB NAVIGATION
+*/
+.home-webp-icone
+{
+    width: 35px;
+    height: 35px;
+    margin-bottom: 30px;
+    margin-top: 9px;
+    margin-left: 2%;
+}
+.navi-webp-icone
+{
+    width: 35px;
+    height: 35px;
+    margin-bottom: 30px;
+    margin-top: 9px;
+    margin-left: 8%;
+}
+.admin-home-navi-webp-icone
+{
+    width: 40px;
+    height: 40px;
+    margin-bottom: 30px;
+    margin-top: 9px;
+    margin-left: 5%;
+}
+.admin-navi-webp-icone
+{
+    width: 40px;
+    height: 40px;
+    margin-bottom: 30px;
+    margin-top: 9px;
+    margin-left: 8%;
+}
+.saving-webp-icone
+{
+    width: 50px;
+    height: 50px;
+    margin-bottom: 30px;
+    margin-top: 9px;
+    margin-left: 8%;
+}
+
+.left-webp-icone
+{
+    width: 35px;
+    height: 35px;
+    /* margin-bottom: 22px; */
+    margin-top: -15px;
+    margin-left: 7%;   
+}
+.profile-svg-img 
+{
+    width: 45px;
+    height: 45px;
+    margin-bottom: 15px;
+}
+
+
+#open-navigation-label-profile-div {float:right; margin-top: -50px;}
+#profile-side-bar{float: right; margin-right:0px;}
+.open-navigation-profile-label
+{
+    font-size:35px;
+    cursor:pointer;
+    color: white;
+}
+
+.main-navigation-links-labels
+{
+    color:blue;
+    text-decoration:none;
+    transition:0.3s;
+    display:block;
+    padding:5px 5px;
+    font-size: 18px;
+    font-family:Times New Roman Times, serif;
+}
+
+/* // profile side bar */
+.profile-php-profile-html-fontstyle
+{
+    padding:5px 5px;
+    font-size: 17px;
+    /* font-weight: bold; */
+    font-family:Times New Roman Times, serif;
+}
+.profile-html-labels 
+{
+    color:black;
+    padding:5px 5px;
+    font-size: 18px;
+    font-family:Times New Roman Times, serif;
+}
+.profile-php-labels {color:blue;}
+
+#profile-vistor-php-labels
+{
+    /* padding:5px 5px;
+    font-size: 17px;
+    margin-top: -10px;*/
+    font-family:Times New Roman Times, serif; 
+    color:blue;
+}
+
+
+.prosfile-side-bar
+{
+    padding-top: 60px;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    overflow-x: hidden;
+    transition: 0.5s;
+    position: fixed;
+
+    margin-top:54px;
+    /* margin-right: 0px; */
+    height: 100%;
+    width: 250px;
+    /* background-color: #dcdcdc; */
+    /* background-color: red; */
+}
+.profile-side-bar
+{
+    position: fixed;
+    height: 100%;
+    width: 0;
+    margin-top:54px;
+    margin-right: 0;
+    padding-top: 60px;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    overflow-x: hidden;
+    transition: 0.5s;
+    background-color:#dcdcdc;
+}
+
+.profile-side-bar-close-btn
+{
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 16px;
+
+    color: blue;
+    font-weight: bold;
+    margin-top: -70px;
+    margin-bottom: 0%;
+    border:none;
+    width:100%;
+    height:40px;
+    border-radius:18px;
+    background-color:#b4d4f7;
+}
+
+.profile-php-profile-html-fontstyle
+{
+    padding:5px 5px;
+    font-size: 17px;
+    /* font-weight: bold; */
+    font-family:Times New Roman Times, serif;
+}
+.login-btn  {background-color:#b4d4f7;}
+.logout-btn {background-color:#b4d4f7;}
+.register-btn {background-color:#b4d4f7;}
+.logout-login-regester-btns-fontstyle
+{
+    font-family: Georgia, "Times New Roman", Times, serif;
+    font-size: 16px;
+
+    color: blue;
+    font-weight: bold;
+    margin-top: 4%;
+    margin-bottom: 0%;
+    border:none;
+    width:50%;
+    height:40px;
+    border-radius:18px;
+}
+
+
+#second-bar-navi-bar {
+    margin-top: -50px;
+    /* float: left; */
+    width: 100%;
+    height: 40px;
+    background-color: whitesmoke;
+    
+}
+/* left side ========================= */
+
+#left-side-bar-navi {
+    margin-top: -22px;
+    float: left;
+    width: 39px;
+    height: 100%;
+    /* background-color: red; */
+}
+
+#content-div
+{
+    margin-top: 35px;
+    /* background-color: red; */
+    margin-left:10px;
+    margin-right:10px;
+}
+#main-header
+{
+    /* overflow: hidden; */
+    position: fixed;
+    width: 95%;
+    margin-top: 8px;
+    margin-left:10px;
+    margin-right:10px;
+}
+#user-control-options-
+{
+    /* background-color: green; */
+    margin-top: -10px;
+    position: fixed;
+    width: 100%;
+}
+#main-screen-header
+{
+    /* background-color: green; */
+    background-color: #222222;
+    position: fixed;
+    width: 100%;
+}
+#main-screen-header {height: 130px;}

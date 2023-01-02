@@ -1,0 +1,284 @@
+
+<?php session_start ();?>
+<html>
+<head>
+	<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+	<title>| Informantion |</title>
+	<script src="static/js/jquery.min.js" ></script>
+	<script src="static/js/main.js"></script>
+	<link rel="stylesheet" type="text/css" href="static/css/main.css">
+	<link rel="stylesheet" type="text/css" href="static/css/w3.css">
+	<link rel="stylesheet" type="text/css" href="static/css/mediarules.css" >
+</head>
+
+<body class="main_body">
+	<div id="main-screen-header" ><!-- main-screen-header -->
+	<div id="main-header">
+		<div id="NaviDiv">
+			<label onclick="Load_Informention_Page ()"> 
+				<img src="static/imgs/info.webp" class="home-webp-icone" >
+			</label>
+	
+			<label onclick="Load_Accounts_Page ()">  
+				<img src="static/imgs/financial.webp" class="navi-webp-icone" >
+			</label>
+
+			<label onclick="Load_Projects_Page ()" >  
+				<img src="static/imgs/project.webp" class="navi-webp-icone" >
+			</label>
+	
+			<label onclick="Load_Plages_Page ()">  
+				<img src="static/imgs/pledges.webp" class="navi-webp-icone" >
+			</label>
+		</div>
+	<div id="open-navigation-label-profile-div">
+		<label class="open-navigation-profile-label" onclick="OpenProfileNavigetion()">
+			<img src="static/imgs/profile.webp" class="profile-svg-img" >
+		</label>
+			<div id= "profile-side-bar" class="profile-side-bar">
+				<br><button onclick="CloseProfileNavigetion()" class="profile-side-bar-close-btn">Close</button>
+	
+				<div id="navigetion-links-div">
+					<br>
+					<center>
+						<form id="user-total-saving-name-form">
+							<input style="display: none;"  type="text" name="name" value="
+							<?php if(isset($_SESSION['user_name'])) : 
+							$name = $_SESSION['user_name'];
+							echo $name;
+							endif 
+							?>">
+							<button type="submit" class="user-total-label-btn" onclick="FetchTotalSavingData ()">My Savings</button>
+						</form>
+
+						<form id="user-total-fees-name-form">
+							<input style="display: none;"  type="text" name="name" value="
+							<?php if(isset($_SESSION['user_name'])) : 
+							$name = $_SESSION['user_name'];
+							echo $name;
+							endif 
+							?>">
+							<button type="submit" class="user-total-label-btn" onclick="FetchTotalFeesData ()">My Fees</button>
+						</form>
+						
+						<?php if(isset($_SESSION['user_name'])) : 
+						$name = $_SESSION['user_name'];
+						$loginname = $_SESSION['login_username'];
+						$contact = $_SESSION['user_contact'];
+						$community = $_SESSION['user_community'];
+						$open_php_label = '<label class="profile-html-labels">';
+						$close_php_label = '</label><br><br>';
+						
+						echo $open_php_label.$name.$close_php_label;
+						echo $open_php_label.$loginname.$close_php_label;
+						echo $open_php_label.$contact.$close_php_label;
+						echo $open_php_label.$community.$close_php_label;
+						echo '<label id="user-total-savings-label" class="user-total-label"> </label>';
+						echo '<label id="user-total-fees-label" class="user-total-label"> </label>';
+
+
+						echo'<br><button onclick="Open_User_Settings ()" type="button"   class="logout-btn logout-login-regester-btns-fontstyle">Settings</button>';
+						echo'<br><button onclick="Log_Out_User ()" type="button"   class="logout-btn logout-login-regester-btns-fontstyle">Log out</button>';
+
+
+						else:
+						echo '<br><label class="profile-php-labels profile-php-profile-html-fontstyle"> Not Logged in </label>
+	
+						<button onclick="Log_In_User ()" type="button"  class="login-btn logout-login-regester-btns-fontstyle">Log in</button>
+						<!-- <br><br><label class="profile-php-labels profile-php-profile-html-fontstyle">Or</label><br>
+						<br><button onclick="Register_User ()" class="register-btn logout-login-regester-btns-fontstyle">Setup Acc</button> -->
+						';
+						endif 
+						?>
+					</center>
+				</div>
+			</div>
+			</div>
+	<script>
+	function openMenus(){document.getElementById("Navigetion").style.width = "240px"}
+	function closeNavi (){document.getElementById("Navigetion").style.width = "0"}
+	function OpenProfileNavigetion(){document.getElementById("profile-side-bar").style.width = "250px"}
+	function CloseProfileNavigetion (){document.getElementById("profile-side-bar").style.width = "0"}
+	</script>
+	
+	</div> <!-- main-header-->
+	<!-- user-control-options -->
+	<button class="selecte-options-btn-title">Sjmda</button>
+	<button class="selecte-options-btn" onclick="document.getElementById('id019').style.display='block';">Option</button><br><br>
+	
+</div><!-- main-screen-header -->
+<br>
+<div id="main-body"><br>
+	<div id="content-div">
+	<br>
+	<div id="id019" class="w3-modal">
+		<div class="w3-modal-content w3-animate-top w3-card-4">
+			<div class="w3-container">
+			<br>
+			<center>
+				<button onclick="Show_Bank_Div ()" class="selecte-options-btn-links">Bank</button><br><br>
+				<button   onclick="Show_Leader_Ship_Div ()" class="selecte-options-btn-links">Leader Ship</button><br><br>
+				<!-- <button onclick="Show_Summary ()"  class="selecte-options-btn-links">Summary</button><br><br> -->
+				<!-- <button onclick="Show_Expenditures ()" class="selecte-options-btn-links-expenditure">Expenditures</button><br><br> -->
+			</center>
+			<button  onclick="document.getElementById('id019').style.display='none';" type="button" class="close-popup-label" >Close</button><br>
+			</div>		
+		</div>
+	</div>
+	<br><br><br>
+	
+		<div id="bank-div"><!-- begin bank-div -->
+			<div id="summary-div">
+				<button type="submit" class="request-btn">
+					Bank
+				</button>
+					<div style="overflow-x:auto;" class="user-view-area">
+						<center>
+							<label class="table-caption" >
+								Sjmda<br>
+							Account No <br>01501119228982<br><br>
+							Members are encouraged deposits their savings/administration fee 
+							on bank account  directly or using DFCU agents and keep deposit 
+							slips which should be presented for  updating  
+							sjmda records (both soft & hard copies).<br><br>
+
+							You should photocopy deposit slips because they fade 
+							Or take a picture using your phone
+						</label>
+						
+						</center> 
+					</div><br><br>
+			</div><!-- End of summary-div -->
+		</div><!-- end bank-div -->
+
+
+		<center>
+		<div id="leader-ship-div"><!-- begin leader-ship-div -->
+			<div class="w3-container">
+			<div class="w3-card-4"  style="background: #dcdcdc; border-bottom-left-radius:10px;border-bottom-right-radius:10px;border-top-left-radius:10px;border-top-right-radius:10px;" ><br>
+				<img src="static/imgs/leader.png" alt="name" class="leaders-img">
+				<center><br>
+					<div class="leader-details">
+						<label><b>Chairman</b> </label><br>
+						<label>Kinobi Paul</label><br><br>
+					</div>
+				</center><br>
+				</div>
+			</div><br>
+
+			<div class="w3-container">
+				<div class="w3-card-4" style="background: #dcdcdc; border-bottom-left-radius:10px;border-bottom-right-radius:10px;border-top-left-radius:10px;border-top-right-radius:10px;"><br>
+					<img src="static/imgs/leader.png" alt="name" class="leaders-img">
+					<center><br>
+						<div class="leader-details">
+							<label><b>Deputy</b></label><br>
+							<label>Nsamba Joseph</label><br><br>
+						</div>
+					</center><br>
+				</div>
+			</div><br>
+
+			<div class="w3-container">
+				<div class="w3-card-4"  style="background: #dcdcdc; border-bottom-left-radius:10px;border-bottom-right-radius:10px;border-top-left-radius:10px;border-top-right-radius:10px;"><br>
+					<img src="static/imgs/leader.png" alt="name" class="leaders-img">
+					<center><br>
+						<div class="leader-details">
+							<label ><b>Treasurer </b></label><br>
+							<label>Bakunda Aventino</label><br><br>
+						</div>
+					</center><br>	
+				</div>
+			</div><br>
+
+			<div class="w3-container">
+				<div class="w3-card-4"  style="background: #dcdcdc; border-bottom-left-radius:10px;border-bottom-right-radius:10px;border-top-left-radius:10px;border-top-right-radius:10px;"><br>
+					<img src="static/imgs/leader.png" alt="name" class="leaders-img">
+					<center><br>
+						<div class="leader-details">
+							<label ><b>Secretary </b></label><br>
+							<label>Ssembalirwa Alex</label><br><br>
+						</div>
+					</center><br>	
+				</div>
+			</div><br>
+		</div><!-- end leader-ship-div -->
+
+	<br>
+	</center>
+</div><!-- content-div -->
+</div><!-- End main body -->
+<script>
+	function Open_User_Settings () {document.getElementById('id01').style.display='block';}
+</script>
+<div id="id01" class="w3-modal">
+	<div class="w3-modal-content w3-animate-top w3-card-4">
+		<div class="w3-container">
+		<br>
+		<center><br>
+			<div class="leader-details"><br>
+				<label>Details Setup</label><br>
+				<form id="user-details-form" >
+					<input style="display: none;"  type="text" name="id" value="
+						<?php if(isset($_SESSION['user_name'])) : 
+						$id = $_SESSION['id'];
+						echo $id;
+						endif 
+						?>">
+					
+					<label>Contact</label>
+					<input type="text" name="contact" maxlength="10" oninput="this.value = this.value.replace(/[^0-9.]/g, '')" class="html-form-inputs" autocomplete="off" placeholder="0777777777" required="required">
+					<label>Community</label>
+					<input type="text" name="community" class="html-form-inputs" autocomplete="off" placeholder="St.aaa" required="required">
+					<button type="submit" onabort="UpdateUserDetails ()"  class="login-btn logout-login-regester-btns-fontstyle">Submit</button><br><br>
+				</form>
+			</div><br>
+			
+			<div class="leader-details"><br>
+				<label>Change Password</label><br>
+				<form id="password-form">
+					<input style="display:none;"  type="text" name="id" value="
+						<?php if(isset($_SESSION['user_name'])) : 
+						$id = $_SESSION['id'];
+						echo $id;
+						endif 
+						?>"><br>
+					<label>Password</label>
+					<!-- <input type="password" name="password" class="html-form-inputs" autocomplete="off" required="required" placeholder="New Password">
+					<label>Confirm password</label> -->
+					<input type="password" name="confirm_password" class="html-form-inputs" autocomplete="off" placeholder="Confirm Password" required="required">
+					<button type="submit" onclick="UpdateUserPassword ()"  class="login-btn logout-login-regester-btns-fontstyle">Submit</button><br><br>
+				</form>
+			</div>
+
+			<br>
+			<div class="leader-details"><br>
+				<div id="success-div" class="w3-panel post-success-feedback">
+					<p>Success!</p>
+					<p>Password :: Updated Very Well </p>
+				</div><br>
+				<div id="error-div" class="w3-panel post-error-feedback">
+					<p>An Error!</p>
+					<label id="post-error-label-feedback" class="post-error-label-feedback"></label>
+				</div><br>
+			</div>
+        </center><br>
+		<button  onclick="document.getElementById('id01').style.display='none';" type="button" class="close-popup-label" >Close</button><br>
+		</div>		
+	</div>
+</div>
+<div id="id020" class="w3-modal">
+	<div class="w3-modal-content w3-animate-top w3-card-4">
+		<div class="w3-container">
+		<br>
+		<center><br>
+			<label id="offline-lable" class="offline-lable" > Check Connection <br> 
+			</label>
+        </center><br><br>
+		<button  onclick="document.getElementById('id020').style.display='none';" type="button" class="close-popup-label" >Close</button><br>
+		</div>		
+	</div>
+</div>
+</body>
+</html>
+
+

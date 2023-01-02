@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Index</title>
+<script src="static/js/jquery.min.js" ></script>
+<script src="static/js/main.js"></script>
+<link rel="stylesheet" type="text/css" href="static/css/main.css">
+<link rel="stylesheet" type="text/css" href="static/css/w3.css">
+<link rel="stylesheet" type="text/css" href="static/css/mediarules.css" >
+</head>
+<body class="main_body">
+    <center><br><br>
+    <div class="index-page-btn-container">
+        
+        <button onclick="Load_User_Guid_Page ()" class="index-page-btns" >User Guide</button><br><br>
+        <button onclick="Log_In_User ()" class="index-page-btns">Log in</button>
+    </div>
+</center>
+<div id="id020" class="w3-modal">
+	<div class="w3-modal-content w3-animate-top w3-card-4">
+		<div class="w3-container">
+		<br>
+		<center><br>
+			<label id="offline-lable" class="offline-lable" > Check Connection <br> 
+			</label>
+        </center><br><br>
+		<button  onclick="document.getElementById('id020').style.display='none';" type="button" class="close-popup-label" >Close</button><br>
+		</div>		
+	</div>
+</div>
+</body>
+</html>

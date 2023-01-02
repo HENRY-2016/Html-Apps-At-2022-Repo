@@ -1,0 +1,374 @@
+
+<?php session_start ();?>
+<html>
+<head>
+<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+<title>| Create |</title>
+<!-- <script src="static/js/main.js" ></script> -->
+<script src="static/js/crud.js" ></script>
+<link rel="stylesheet" type="text/css" href="static/css/main.css" >
+<link rel="stylesheet" type="text/css" href="static/css/w3.css">
+<link rel="stylesheet" type="text/css" href="static/css/mediarules.css" >
+<script>
+
+
+function SetupAutocompleteTypes () 
+{
+    autocomplete(document.getElementById("fees-name-input-id"), member_names);
+    autocomplete(document.getElementById("saving-name-input-id"), member_names);
+    autocomplete(document.getElementById("expenditure-name-input-id"), member_names);    
+    autocomplete(document.getElementById("pledges-name-input-id"),member_names);
+    autocomplete(document.getElementById("receive-pledges-name-input-id"),pledge_names);
+}
+function SetUpMemberNames (){Load_Sjmda_Member_Names();Load_Sjmda_Pledge_Names ();}
+
+function Do_Logic ()
+{
+    // Hide_all_Admin_Divs ();
+    setTimeout(SetUpMemberNames,2000)
+    setTimeout(SetupAutocompleteTypes,3000)
+}
+</script>
+</head>
+<!--  -->
+<body class="main_body" onload=" Do_Logic ()"  >
+	<div id="main-header">
+		<div id="NaviDiv">
+			<label onclick="Load_Admin_Create_Page ()"> 
+				<img src="static/imgs/admin_create.webp" class="admin-home-navi-webp-icone" >
+			</label>
+	
+			<label onclick="Load_Admin_View_Page ()">  
+				<img src="static/imgs/admin_view.webp" class="admin-navi-webp-icone" >
+			</label>
+
+			<label onclick="Load_Admin_Load_Users_Page ()" >  
+				<img src="static/imgs/admin_users.webp" class="navi-webp-icone" >
+			</label>
+            <!--
+			<label onclick="Load_Admin_Delete_Page ()">  
+				<img src="static/imgs/admin_delete.webp" class="navi-webp-icone" >
+			</label> -->
+		</div>
+	<div id="open-navigation-label-profile-div">
+		<label class="open-navigation-profile-label" onclick="OpenProfileNavigetion()">
+			<img src="static/imgs/profile.webp" class="profile-svg-img" >
+		</label>
+			<div id= "profile-side-bar" class="profile-side-bar">
+				<br><button onclick="CloseProfileNavigetion()" class="profile-side-bar-close-btn">Close</button>
+	
+				<div id="navigetion-links-div">
+					<br>
+					<center>
+						<br><label class="profile-html-labels profile-php-profile-html-fontstyle"> Name</label><br>
+	
+						<br><label class="profile-html-labels profile-php-profile-html-fontstyle"> Contacts</label><br>
+							
+						<br><label class="profile-html-labels profile-php-profile-html-fontstyle"> St. Kizito</label><br>
+	
+						<br><br>
+						<label onclick="Load_Savings_Administratives_Page()">  
+							<img src="static/imgs/saving.webp" class="saving-webp-icone" >
+						</label>
+	
+						<br><br><button onclick="Log_Out_Admin ()" type="button"   class="logout-btn logout-login-regester-btns-fontstyle">Log out</button>
+					</center>
+				</div>
+			</div>
+		</div>
+	<script>
+	function openMenus(){document.getElementById("Navigetion").style.width = "240px"}
+	function closeNavi (){document.getElementById("Navigetion").style.width = "0"}
+	function OpenProfileNavigetion(){document.getElementById("profile-side-bar").style.width = "250px"}
+	function CloseProfileNavigetion (){document.getElementById("profile-side-bar").style.width = "0"}
+	</script>
+	
+	</div> <!-- main-header-->
+<div id="main-body"><br>
+	
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    <br>
+    
+		<button type="button" class="request-btn" >Create</button>
+        <center>
+        <div class="user-view-area" >    
+            <div class="grid-container-btns">
+                <div class="grid-item-btns">
+                    <button class="admin-menu-btns" onclick="Show_Add_Member_Panel_Div ()">Member</button>
+                </div>
+                <div class="grid-item-btns">
+                    <button class="admin-menu-btns" onclick="Show_Add_Expenditures_Panel_Div ()">Expense</button>
+                </div>
+                <div class="grid-item-btns">
+                    <button class="admin-menu-btns" onclick="Show_Add_Saving_Panel_Div ()">Savings</button>
+                </div>
+                <div class="grid-item-btns">
+                    <button class="admin-menu-btns" onclick="Show_Add_Pledges_Panel_Div ()">Pledges</button>
+                </div>
+                <div class="grid-item-btns">
+                    <button class="admin-menu-btns" onclick="Show_Add_Fees_Panel_Div ()">Fees</button>
+                </div>
+                <div class="grid-item-btns">
+                    <button class="admin-menu-btns" onclick="Show_Receive_Pledges_Panel_Div ()">Receive P</button>
+                </div>
+            </div>
+        </div>
+    </center><br>
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+
+    <div id="add-member-panel-div">
+        <center>
+            <button type="button" class="request-btn" >Member</button>
+            <form class="admin-form" id="register-form">
+
+                <label>Name</label>
+                <input required class="form_input" name="name" autocomplete="off" type="text"><br>
+
+                <!-- <label>Contacts</label>
+                <input required class="form_input" name="contacts" autocomplete="off" type="text"><br> -->
+
+                <label>Fees</label>
+                <input required class="form_input" name="fees" autocomplete="off" type="text"><br>
+
+                <!-- <label>Password</label> form_input" placeholder="Password" name="password" autocomplete="off" type="password"><br> -->
+                <button type="submit" onclick="RegisterMember ()" class="submit-btn">Submit</button>
+                <br><br>
+                <div id="member-success-div" class="w3-panel post-success-feedback">
+                    <p>Success!</p>
+                    <p>Member :: Posted Very well </p>
+                </div>
+                <div id="member-error-div" class="w3-panel post-error-feedback">
+                    <p>An Error!</p>
+                    <label id="post-error-label-feedback" class="post-error-label-feedback"></label>
+                </div>
+                <br>
+            </form>
+        </center>
+    </div>
+
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    <div id="add-expenditures-panel-div">
+        <center>
+            <button type="button" class="request-btn" >Expense</button>
+            <form class="admin-form" id="expenditure-form">
+
+                <label>Item / Project</label>
+                <input required class="form_input" name="item" autocomplete="off" type="text"><br>
+
+                <label>Amount</label>
+                <input required class="form_input" name="amount" autocomplete="off" type="text"><br>
+
+                <label>Received By</label><br>
+                <div class="autocomplete">
+                    <input id="expenditure-name-input-id" type="text" name="taken_by" placeholder="Type first letter" autocomplete="off" class="paint-name order-inputs">
+                </div><br>
+
+                <!-- <label>Password</label> form_input" placeholder="Password" name="password" autocomplete="off" type="password"><br> -->
+                <button type="submit" onclick="SubmiteExpenditureData ()" class="submit-btn">Submit</button>
+                <br><br>
+                <div id="expense-success-div" class="w3-panel post-success-feedback">
+                    <p>Success!</p>
+                    <p>Expense :: Posted Very well </p>
+                </div>
+                <div id="expense-error-div" class="w3-panel post-error-feedback">
+                    <p>An Error!</p>
+                    <label id="post-error-label-feedback" class="post-error-label-feedback"></label>
+                </div>
+                <br>
+            </form>
+        </center>
+    </div>
+
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  -->
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    <div id="add-pledges-panel-div">
+        <center>
+            <button type="button" class="request-btn" >Pledges</button>
+            <form class="admin-form" id="pledges-form">
+                <label>Item / Project</label>
+                <select required class="form_input" name="item" autocomplete="off" type="text"><br>
+                <option >select</option>
+                <option value="Pavers" >Pavers</option>
+                <option value="Sugarcanes" >Sugarcanes</option>
+                </select><br>
+
+                <label>Name</label><br>
+                <!-- <input required class="form_input" name="name" placeholder="Taken By ..." autocomplete="off" type="text"><br> -->
+                <div class="autocomplete">
+                    <input id="pledges-name-input-id" type="text" name="name" placeholder="Type first letter" autocomplete="off" class="paint-name order-inputs">
+                </div><br>
+
+                <label>Amount</label>
+                <input required class="form_input" name="amount" autocomplete="off" type="text"><br>
+
+                
+                <!-- <label>Password</label> form_input" placeholder="Password" name="password" autocomplete="off" type="password"><br> -->
+                <button type="submit" onclick="SubmitePledgesData ()" class="submit-btn">Submit</button>
+                <br><br>
+
+                <div id="pledges-success-div" class="w3-panel post-success-feedback">
+                    <p>Success!</p>
+                    <p>Pledges :: Posted Very well </p>
+                </div>
+                <div id="pledges-error-div" class="w3-panel post-error-feedback">
+                    <p>An Error!</p>
+                    <label id="post-error-label-feedback" class="post-error-label-feedback"></label>
+                </div>
+                <br>
+            </form>
+        </center>
+    </div>
+
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  -->
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    <div id="receive-pledges-panel-div">
+        <center>
+            <button type="button" class="request-btn" >Receive P</button>
+            <form class="admin-form" id="receive-pledges-form">
+
+                <label>Item / Project</label>
+                <select required class="form_input" name="item" autocomplete="off" type="text"><br>
+                <option >select</option>
+                <option value="Pavers" >Pavers</option>
+                <option value="Sugarcanes" >Sugarcanes</option>
+                </select><br>
+
+                <label>Name</label><br>
+                <!-- <input required class="form_input" name="name" placeholder="Taken By ..." autocomplete="off" type="text"><br> -->
+                <div class="autocomplete">
+                    <input id="receive-pledges-name-input-id" type="text" name="name" placeholder="Type first letter" autocomplete="off" class="paint-name order-inputs">
+                </div><br>
+
+                <label>Amount</label>
+                <input required class="form_input" name="amount" autocomplete="off" type="text"><br>
+
+                
+                <button type="submit" onclick="SubmiteReceivePledgesData ()" class="submit-btn">Submit</button>
+                <br><br>
+                <div id="receive-pledges-success-div" class="w3-panel post-success-feedback">
+                    <p>Success!</p>
+                    <p>Receive Pledges :: Posted Very well </p>
+                </div>
+                <div id="receive-pledges-error-div" class="w3-panel post-error-feedback">
+                    <p>An Error!</p>
+                    <label id="post-error-label-feedback" class="post-error-label-feedback"></label>
+                </div>
+                <br>
+            </form>
+        </center>
+    </div>
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    
+    <div id="add-fees-panel-div">
+        <center>
+            <button type="button" class="request-btn" >Fees</button>
+            <form class="admin-form"  id="fees-form">
+                <br><br>
+
+                <label class="input-discription-labels">Name</label><br>
+                <div class="autocomplete">
+                    <input id="fees-name-input-id" type="text" name="name" placeholder="Type first letter" autocomplete="off" class="paint-name order-inputs">
+                </div><br>
+
+                <label class="input-discription-labels">Year</label><br>
+                <div class="autocomplete">
+                    <input id="fees-year-input-id" type="text" name="year" placeholder="Type first letter" autocomplete="off" class="paint-name order-inputs">
+                </div><br>
+
+                <label class="input-discription-labels">Month</label><br>
+                <div class="autocomplete">
+                    <input id="fees-month-input-id" type="text" name="month" placeholder="Type first letter" autocomplete="off" class="paint-name order-inputs">
+                </div><br>
+
+                <label>Amount</label>
+                <input required class="form_input" name="fees" autocomplete="off" type="text"><br>
+
+                <!-- <label>Password</label> form_input" placeholder="Password" name="password" autocomplete="off" type="password"><br> -->
+                <button type="submit" onclick="SubmiteFeesData ()" class="submit-btn">Submit</button>
+                <br><br>
+                <div id="fees-success-div" class="w3-panel post-success-feedback">
+                    <p>Success!</p>
+                    <p>Fees :: Posted Very well </p>
+                </div>
+                <div id="fees-error-div" class="w3-panel post-error-feedback">
+                    <p>An Error!</p>
+                    <label id="post-error-label-feedback" class="post-error-label-feedback"></label>
+                </div>
+                <br>
+            </form>
+        </center>
+    </div>
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    
+    <div id="add-saving-panel-div">
+        <center>
+            <button type="button" class="request-btn" >saving</button>
+            <form class="admin-form"  id="saving-form">
+                <br><br>
+                <label class="input-discription-labels">Name</label><br>
+                <div class="autocomplete">
+                    <input id="saving-name-input-id" type="text" name="name" placeholder="Type first letter" autocomplete="off" class="paint-name order-inputs">
+                </div><br>
+
+                <label class="input-discription-labels">Year</label><br>
+                <div class="autocomplete">
+                    <input id="saving-year-input-id" type="text" name="year" placeholder="Type first letter" autocomplete="off" class="paint-name order-inputs">
+                </div><br>
+
+                <label class="input-discription-labels">Month</label><br>
+                <div class="autocomplete">
+                    <input id="saving-month-input-id" type="text" name="month" placeholder="Type first letter" autocomplete="off" class="paint-name order-inputs">
+                </div><br>
+
+                <label>Amount</label>
+                <input required class="form_input" name="fees" autocomplete="off" type="text"><br>
+
+                <button type="submit" onclick="SubmiteSavingData ()" class="submit-btn">Submit</button>
+                <br><br>
+                <div id="saving-success-div" class="w3-panel post-success-feedback">
+                    <p>Success!</p>
+                    <p>Saving :: Posted Very well </p>
+                </div>
+                <div id="saving-error-div" class="w3-panel post-error-feedback">
+                    <p>An Error!</p>
+                    <label id="post-error-label-feedback" class="post-error-label-feedback"></label>
+                </div>
+                <br>
+            </form>
+        </center>
+    </div>
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+
+</div>
+<script>
+autocomplete(document.getElementById("fees-year-input-id"), years)
+autocomplete(document.getElementById("fees-month-input-id"), months)
+autocomplete(document.getElementById("saving-year-input-id"), years)
+autocomplete(document.getElementById("saving-month-input-id"), months)
+
+</script>
+</body>
+</html>
+

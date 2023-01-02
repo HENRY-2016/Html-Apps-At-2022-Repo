@@ -1,0 +1,568 @@
+
+<?php session_start ();?>
+<html>
+<head>
+<meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
+<title>| View |</title>
+<script src="static/js/jquery.min.js" ></script>
+<script src="static/js/crud.js" ></script>
+<link rel="stylesheet" type="text/css" href="static/css/main.css" >
+<link rel="stylesheet" type="text/css" href="static/css/w3.css">
+<link rel="stylesheet" type="text/css" href="static/css/mediarules.css" >
+<script>
+
+
+function SetupAutocompleteTypes () 
+{
+    autocomplete(document.getElementById("fees-name-input-id"), member_names);
+    autocomplete(document.getElementById("saving-name-input-id"), member_names);
+    autocomplete(document.getElementById("username-input-id"), member_names);    
+
+    // autocomplete(document.getElementById("expenditure-name-input-id"), member_names);    
+    // autocomplete(document.getElementById("pledges-name-input-id"),member_names);
+    // autocomplete(document.getElementById("receive-pledges-name-input-id"),pledge_names);
+}
+function SetUpMemberNames (){Load_Sjmda_Member_Names();Load_Sjmda_Pledge_Names ();}
+
+function Do_Logic ()
+{
+    // Hide_all_Admin_Divs ();
+    setTimeout(SetUpMemberNames,2000)
+    setTimeout(SetupAutocompleteTypes,3000)
+}
+</script>
+</head>
+<!--  -->
+<body class="main_body" onload=" Do_Logic ()"  >
+	<div id="main-header">
+		<div id="NaviDiv">
+			<label onclick="Load_Admin_Create_Page ()"> 
+				<img src="static/imgs/admin_create.webp" class="admin-home-navi-webp-icone" >
+			</label>
+	
+			<label onclick="Load_Admin_View_Page ()">  
+				<img src="static/imgs/admin_view.webp" class="admin-navi-webp-icone" >
+			</label>
+
+			<!-- <label onclick="Load_Admin_Update_Page ()" >  
+				<img src="static/imgs/admin_update.webp" class="navi-webp-icone" >
+			</label>
+	
+			<label onclick="Load_Admin_Delete_Page ()">  
+				<img src="static/imgs/admin_delete.webp" class="navi-webp-icone" >
+			</label> -->
+		</div>
+	<div id="open-navigation-label-profile-div">
+		<label class="open-navigation-profile-label" onclick="OpenProfileNavigetion()">
+			<img src="static/imgs/profile.webp" class="profile-svg-img" >
+		</label>
+			<div id= "profile-side-bar" class="profile-side-bar">
+				<br><button onclick="CloseProfileNavigetion()" class="profile-side-bar-close-btn">Close</button>
+	
+				<div id="navigetion-links-div">
+					<br>
+					<center>
+						<br><label class="profile-html-labels profile-php-profile-html-fontstyle"> Name</label><br>
+	
+						<br><label class="profile-html-labels profile-php-profile-html-fontstyle"> Contacts</label><br>
+							
+						<br><label class="profile-html-labels profile-php-profile-html-fontstyle"> St. Kizito</label><br>
+	
+						<br><br>
+						<label onclick="Load_Savings_Administratives_Page()">  
+							<img src="static/imgs/saving.webp" class="saving-webp-icone" >
+						</label>
+	
+						<br><br><button onclick="Log_Out_Admin ()" type="button"   class="logout-btn logout-login-regester-btns-fontstyle">Log out</button>
+					</center>
+				</div>
+			</div>
+		</div>
+	<script>
+	function openMenus(){document.getElementById("Navigetion").style.width = "240px"}
+	function closeNavi (){document.getElementById("Navigetion").style.width = "0"}
+	function OpenProfileNavigetion(){document.getElementById("profile-side-bar").style.width = "250px"}
+	function CloseProfileNavigetion (){document.getElementById("profile-side-bar").style.width = "0"}
+	</script>
+	
+	</div> <!-- main-header-->
+<div id="main-body"><br>
+	
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    <br>
+    
+		<button type="button" class="request-btn" >View</button>
+        <center>
+        <div class="user-view-area" >    
+            <div class="grid-container-btns">
+                <div class="grid-item-btns">
+                    <button class="admin-menu-btns" onclick="Show_Add_Member_Panel_Div ()">Member</button>
+                </div>
+                <div class="grid-item-btns">
+                    <button class="admin-menu-btns" onclick="Show_Add_Expenditures_Panel_Div ()">Expense</button>
+                </div>
+                <div class="grid-item-btns">
+                    <button class="admin-menu-btns" onclick="Show_Add_Saving_Panel_Div ()">Savings</button>
+                </div>
+                <div class="grid-item-btns">
+                    <button class="admin-menu-btns" onclick="Show_Add_Pledges_Panel_Div ()">Pledges</button>
+                </div>
+                <div class="grid-item-btns">
+                    <button class="admin-menu-btns" onclick="Show_Add_Fees_Panel_Div ()">Fees</button>
+                </div>
+                <div class="grid-item-btns">
+                    <button class="admin-menu-btns" onclick="Show_Receive_Pledges_Panel_Div ()">Receive P</button>
+                </div>
+            </div>
+        </div>
+    </center><br>
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+
+    <div id="add-member-panel-div">
+        <center>
+            <button type="button" class="request-btn" >Members</button>
+            <form class="admin-form" id="register-form">
+                <br>
+                <button type="button" onclick="Show_Members_Data ()" class="submit-btn">Members</button><br>
+                <button type="button" onclick="Show_Member_Details_Data ()" class="submit-btn">Details</button>
+                <button type="button" onclick="Show_Username_Details_Data ()" class="submit-btn">User Name</button>
+            </form>
+        </center>
+        <!-- <button type="button" class="request-btn" >Members</button> -->
+		<div style="overflow-x:auto;" class="user-view-area">
+            <div id="admin-members-view-id"> 
+                <center>
+                    <div class="update-delete-table">
+                        <div class="grid-item-btns">
+                            <button type="button" onclick="Show_Members_Data1 ()" class="update-delete-btn member-update-delete-btns">Update</button>
+                        </div> 
+                        <div class="grid-item-btns">
+                            <button type="button" onclick="Show_Members_Data1 ()" class="update-delete-btn member-update-delete-btns">Delete</button>
+                        </div> 
+                    </div>
+                    <table id="members-table" class="w3-card-4" >
+                        <thead></thead>
+                        <tbody id="members-tbody"></tbody>
+                    </table>
+                    <br>
+                    <div class="update-delete-table">
+                        <div class="grid-item-btns">
+                            <button type="button" onclick="Show_Members_Data1 ()" class="update-delete-btn member-update-delete-btns">Update</button>
+                        </div> 
+                        <div class="grid-item-btns">
+                            <button type="button" onclick="Show_Members_Data1 ()" class="update-delete-btn member-update-delete-btns">Delete</button>
+                        </div> 
+                    </div>
+                </center>
+            </div>
+            <div id="admin-member-details-view-id">
+                <center>
+                    <div class="update-delete-table">
+                        <div class="grid-item-btns">
+                            <button type="button" onclick="Show_Members_Data1 ()" class="update-delete-btn member-details-update-delete-btns">Update</button>
+                        </div> 
+                        <div class="grid-item-btns">
+                            <button type="button" onclick="Show_Members_Data1 ()" class="update-delete-btn member-details-update-delete-btns">Delete</button>
+                        </div> 
+                    </div>
+                    <table id="member-details-table" class="w3-card-4" >
+                        <thead></thead>
+                        <tbody id="member-details-tbody"></tbody>
+                    </table>
+                    <br>
+                    <div class="update-delete-table">
+                        <div class="grid-item-btns">
+                            <button type="button" onclick="Show_Members_Data1 ()" class="update-delete-btn member-details-update-delete-btns">Update</button>
+                        </div> 
+                        <div class="grid-item-btns">
+                            <button type="button" onclick="Show_Members_Data1 ()" class="update-delete-btn member-details-update-delete-btns">Delete</button>
+                        </div> 
+                    </div>
+                </center>
+            </div>
+            
+            <div id="admin-username-details-view-id">
+                <center>
+                    <br>
+                    <div class="update-delete-table">
+                        <div class="grid-item-btns">
+                            <button type="button" onclick="Show_Members_Data1 ()" class="update-delete-btn username-update-delete-btns">Update</button>
+                        </div> 
+                        <div class="grid-item-btns">
+                            <button type="button" onclick="document.getElementById ('username-delete-modal').style.display='block'" class="update-delete-btn username-update-delete-btns">Delete</button>
+                        </div> 
+                    </div>
+                    <table id="username-details-table" class="w3-card-4" >
+                        <thead></thead>
+                        <tbody id="username-details-tbody"></tbody>
+                    </table>
+                    <br>
+                    <div class="update-delete-table">
+                        <div class="grid-item-btns">
+                            <button type="button" onclick="Show_Members_Data1 ()" class="update-delete-btn username-update-delete-btns">Update</button>
+                        </div> 
+                        <div class="grid-item-btns">
+                            <button type="button" onclick="document.getElementById ('username-delete-modal').style.display='block'" class="update-delete-btn username-update-delete-btns">Delete</button>
+                        </div> 
+                    </div>
+                </center>
+                <div id="username-delete-modal" class="w3-modal">
+                    <div class="w3-modal-content w3-animate-top w3-card-4">
+                        <div class="w3-container first-pop-up-window">
+                            <br>
+                            <form class="admin-delete-form" id="delete-username-form" ><br>
+                                <center>
+                                    <label>Name</label><br>
+                                    <div class="autocomplete">
+                                        <input id="username-input-id" type="text" name="name" placeholder="Type first letter" autocomplete="off" class="paint-name order-inputs">
+                                    </div><br>
+                
+                                    <button type="submit" onclick="DeleteDataFunction ('delete-username-form',delete_username_url,'delete-username-success-div','delete-username-error-div','post-error-label-feedback')" class="submit-btn">Delete</button>
+                                    <br><br>
+                                    <div id="delete-username-success-div" class="w3-panel post-success-feedback">
+                                        <p>Success!</p>
+                                        <p>Username :: Deleted </p>
+                                    </div>
+                                    <div id="delete-username-error-div" class="w3-panel post-error-feedback">
+                                        <p>An Error!</p>
+                                        <label id="post-error-label-feedback" class="post-error-label-feedback"></label>
+                                    </div>
+                                </center>
+                            </form>
+                            <button onclick="document.getElementById('username-delete-modal').style.display='none';" type="button" class="post-btn" >Close</button><br>
+                        </div>		
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    <div id="add-expenditures-panel-div">
+        <center>
+            <button type="button" class="request-btn" >Expense</button>
+            <!-- <form class="admin-form" id="expenditure-form">
+                <br>
+                <label>Item / Project</label>
+                <input required class="form_input" name="item" autocomplete="off" type="text"><br>
+
+                <label>Amount</label>
+                <input required class="form_input" name="amount" autocomplete="off" type="text"><br>
+
+                <label>Received By</label><br>
+                <div class="autocomplete">
+                    <input id="expenditure-name-input-id" type="text" name="taken_by" placeholder="Type first letter" autocomplete="off" class="paint-name order-inputs">
+                </div><br> 
+
+                <button type="submit" onclick="SubmiteExpenditureData ()" class="submit-btn">Submit</button> 
+                <br><br>
+            </form> -->
+            <br><br>
+            <button type="submit" onclick="ShowExpenseData ()" class="submit-btn">View</button>
+
+            <div style="overflow-x:auto;" class="user-view-area">
+
+				<center>
+                    <div class="update-delete-table">
+                        <div class="grid-item-btns">
+                            <button type="button" onclick="Show_Members_Data1 ()" class="update-delete-btn expense-update-delete-btns">Update</button>
+                        </div> 
+                        <div class="grid-item-btns">
+                            <button type="button" onclick="Show_Members_Data1 ()" class="update-delete-btn expense-update-delete-btns">Delete</button>
+                        </div> 
+                    </div>
+					<table id="expenditures-table" class=" w3-card-4" >
+						<thead></thead>
+						<tbody id="expenditures-tbody"></tbody>
+					</table>
+					<br>
+					<input id="expenditure-final-total-id" class="grand-total-input" readonly type="text"/>
+                    <br>
+                    <div class="update-delete-table">
+                        <div class="grid-item-btns">
+                            <button type="button" onclick="Show_Members_Data1 ()" class="update-delete-btn expense-update-delete-btns">Update</button>
+                        </div> 
+                        <div class="grid-item-btns">
+                            <button type="button" onclick="Show_Members_Data1 ()" class="update-delete-btn expense-update-delete-btns">Delete</button>
+                        </div> 
+                    </div>
+				</center> 
+			</div><br><br>
+        </center>
+    </div>
+
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  -->
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    <div id="add-pledges-panel-div">
+        <center>
+            <button type="button" class="request-btn" >Pledges</button>
+            <!-- <form class="admin-form" id="pledges-form">
+                <label>Item / Project</label>
+                <select required class="form_input" name="item" autocomplete="off" type="text"><br>
+                <option >select</option>
+                <option value="Pavers" >Pavers</option>
+                <option value="Sugarcanes" >Sugarcanes</option>
+                </select><br>
+
+                <label>Name</label><br>
+                <div class="autocomplete">
+                    <input id="pledges-name-input-id" type="text" name="name" placeholder="Type first letter" autocomplete="off" class="paint-name order-inputs">
+                </div><br>
+
+                <label>Amount</label>
+                <input required class="form_input" name="amount" autocomplete="off" type="text"><br>
+
+                
+                <button type="submit" onclick="Show_Pavers_Pledges ()" class="submit-btn">Submit</button>
+                <br><br>
+
+                <div id="pledges-success-div" class="w3-panel post-success-feedback">
+                    <p>Success!</p>
+                    <p>Pledges :: Posted Very well </p>
+                </div>
+                <div id="pledges-error-div" class="w3-panel post-error-feedback">
+                    <p>An Error!</p>
+                    <label id="post-error-label-feedback" class="post-error-label-feedback"></label>
+                </div>
+                <br>
+            </form> -->
+            <br>
+            <button type="submit" onclick="Show_Pavers_Pledges ()" class="submit-btn">View</button>
+            <br>
+            <div style="overflow-x:auto;" class="user-view-area">
+                <center>
+                    <br>
+                    <div class="update-delete-table">
+                        <div class="grid-item-btns">
+                            <button type="button" onclick="Show_Members_Data1 ()" class="update-delete-btn pledge-update-delete-btns">Update</button>
+                        </div> 
+                        <div class="grid-item-btns">
+                            <button type="button" onclick="Show_Members_Data1 ()" class="update-delete-btn pledge-update-delete-btns">Delete</button>
+                        </div> 
+                    </div>
+                    <table id="pavers-table" class="w3-card-4" >
+                        <caption class="pledges-table-caption" > Pledges</caption>
+                        <thead></thead>
+                        <tbody id="pavers-tbody"></tbody>
+                    </table>
+                    <br>
+                    <input id="pavers-pledges-final-total-id" class="grand-total-input" readonly type="text"/>
+                    <br>
+                    <div class="update-delete-table">
+                        <div class="grid-item-btns">
+                            <button type="button" onclick="Show_Members_Data1 ()" class="update-delete-btn pledge-update-delete-btns">Update</button>
+                        </div> 
+                        <div class="grid-item-btns">
+                            <button type="button" onclick="Show_Members_Data1 ()" class="update-delete-btn pledge-update-delete-btns">Delete</button>
+                        </div> 
+                    </div>
+                </center> 
+            </div><br><br>
+        </center>
+    </div>
+
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@  -->
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    <div id="receive-pledges-panel-div">
+        <center>
+            <button type="button" class="request-btn" >Receive P</button>
+            <!-- <form class="admin-form" id="receive-pledges-form">
+
+                <label>Item / Project</label>
+                <select required class="form_input" name="item" autocomplete="off" type="text"><br>
+                <option >select</option>
+                <option value="Pavers" >Pavers</option>
+                <option value="Sugarcanes" >Sugarcanes</option>
+                </select><br>
+
+                <label>Name</label><br>
+                <div class="autocomplete">
+                    <input id="receive-pledges-name-input-id" type="text" name="name" placeholder="Type first letter" autocomplete="off" class="paint-name order-inputs">
+                </div><br>
+
+                <label>Amount</label>
+                <input required class="form_input" name="amount" autocomplete="off" type="text"><br>
+
+                
+                <button type="submit" onclick="SubmiteReceivePledgesData ()" class="submit-btn">Submit</button>
+                <br><br>
+                <div id="receive-pledges-success-div" class="w3-panel post-success-feedback">
+                    <p>Success!</p>
+                    <p>Receive Pledges :: Posted Very well </p>
+                </div>
+                <div id="receive-pledges-error-div" class="w3-panel post-error-feedback">
+                    <p>An Error!</p>
+                    <label id="post-error-label-feedback" class="post-error-label-feedback"></label>
+                </div>
+                <br>
+            </form> -->
+            <br>
+            <button type="submit" onclick="Show_Paid_Pledges_Data ()" class="submit-btn">View</button>
+            <br>
+            <div style="overflow-x:auto;" class="user-view-area">
+                <center>
+                    <div class="update-delete-table">
+                        <div class="grid-item-btns">
+                            <button type="button" onclick="Show_Members_Data1 ()" class="update-delete-btn pledge-recieved-update-delete-btns">Update</button>
+                        </div> 
+                        <div class="grid-item-btns">
+                            <button type="button" onclick="Show_Members_Data1 ()" class="update-delete-btn pledge-recieved-update-delete-btns">Delete</button>
+                        </div> 
+                    </div>
+                    <table id="pavers-paid-table" class="w3-card-4" >
+                        <caption class="pledges-table-caption" > Paid</caption>
+                        <thead></thead>
+                        <tbody id="pavers-paid-tbody"></tbody>
+                    </table>
+                    <br>
+                    <input id="pavers-pledges-received-final-total-id" class="grand-total-input" readonly type="text"/>
+                    <br>
+                    <div class="update-delete-table">
+                        <div class="grid-item-btns">
+                            <button type="button" onclick="Show_Members_Data1 ()" class="update-delete-btn pledge-recieved-update-delete-btns">Update</button>
+                        </div> 
+                        <div class="grid-item-btns">
+                            <button type="button" onclick="Show_Members_Data1 ()" class="update-delete-btn pledge-recieved-update-delete-btns">Delete</button>
+                        </div> 
+                    </div>
+                </center> 
+            </div><br><br>        
+        </center>
+    </div>
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    
+    <div id="add-fees-panel-div">
+        <center>
+            <button type="button" class="request-btn" >Fees</button>
+            <form class="admin-form"  id="fees-form">
+                <br><br>
+
+                <label class="input-discription-labels">Name</label><br>
+                <div class="autocomplete">
+                    <input id="fees-name-input-id" type="text" name="name" placeholder="Type first letter" autocomplete="off" class="paint-name order-inputs">
+                </div><br>
+
+                <label class="input-discription-labels">Year</label><br>
+                <div class="autocomplete">
+                    <input id="fees-year-input-id" type="text" name="year" placeholder="Type first letter" autocomplete="off" class="paint-name order-inputs">
+                </div><br>
+
+                <!-- <label>Password</label> form_input" placeholder="Password" name="password" autocomplete="off" type="password"><br> -->
+                <button type="submit" onclick="ShowMemberFeesData ()" class="submit-btn">View</button>
+                <br><br>
+            </form>
+            <div style="overflow-x:auto;" class="user-view-area">
+                <center>
+                    <br>
+                    <div class="update-delete-table">
+                        <div class="grid-item-btns">
+                            <button type="button" onclick="Show_Members_Data1 ()" class="update-delete-btn fees-update-delete-btns">Update</button>
+                        </div> 
+                        <div class="grid-item-btns">
+                            <button type="button" onclick="Show_Members_Data1 ()" class="update-delete-btn fees-update-delete-btns">Delete</button>
+                        </div> 
+                    </div>
+                    <table id="fees-user-table" class="w3-card-4" >
+                        <thead></thead>
+                        <tbody id="fees-user-tbody"></tbody>
+                    </table>
+                    <br>
+                    <div class="update-delete-table">
+                        <div class="grid-item-btns">
+                            <button type="button" onclick="Show_Members_Data1 ()" class="update-delete-btn fees-update-delete-btns">Update</button>
+                        </div> 
+                        <div class="grid-item-btns">
+                            <button type="button" onclick="Show_Members_Data1 ()" class="update-delete-btn fees-update-delete-btns">Delete</button>
+                        </div> 
+                    </div>
+                </center> 
+            </div><br><br>
+        </center>
+    </div>
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+    
+    <div id="add-saving-panel-div">
+        <center>
+            <button type="button" class="request-btn" >Saving</button>
+            <form class="admin-form"  id="saving-form">
+                <br><br>
+                <label class="input-discription-labels">Name</label><br>
+                <div class="autocomplete">
+                    <input id="saving-name-input-id" type="text" name="name" placeholder="Type first letter" autocomplete="off" class="paint-name order-inputs">
+                </div><br>
+
+                <label class="input-discription-labels">Year</label><br>
+                <div class="autocomplete">
+                    <input id="saving-year-input-id" type="text" name="year" placeholder="Type first letter" autocomplete="off" class="paint-name order-inputs">
+                </div><br>
+
+                <!-- <label class="input-discription-labels">Month</label><br>
+                <div class="autocomplete">
+                    <input id="saving-month-input-id" type="text" name="month" placeholder="Type first letter" autocomplete="off" class="paint-name order-inputs">
+                </div><br>
+
+                <label>Amount</label>
+                <input required class="form_input" name="fees" autocomplete="off" type="text"><br> -->
+
+                <button type="submit" onclick="ShowMemberSavingData ()" class="submit-btn">View</button>
+                <br>
+            </form>
+            <div style="overflow-x:auto;" class="user-view-area">
+                <center>
+                    <div class="update-delete-table">
+                        <div class="grid-item-btns">
+                            <button type="button" onclick="Show_Members_Data1 ()" class="update-delete-btn saving-update-delete-btns">Update</button>
+                        </div> 
+                        <div class="grid-item-btns">
+                            <button type="button" onclick="Show_Members_Data1 ()" class="update-delete-btn saving-update-delete-btns">Delete</button>
+                        </div> 
+                    </div>
+                    <table id="saving-user-table" class="w3-card-4" >
+                        <thead></thead>
+                        <tbody id="saving-user-tbody"></tbody>
+                    </table>
+                    <br>
+                    <div class="update-delete-table">
+                        <div class="grid-item-btns">
+                            <button type="button" onclick="Show_Members_Data1 ()" class="update-delete-btn saving-update-delete-btns">Update</button>
+                        </div> 
+                        <div class="grid-item-btns">
+                            <button type="button" onclick="Show_Members_Data1 ()" class="update-delete-btn saving-update-delete-btns">Delete</button>
+                        </div> 
+                    </div>
+                </center> 
+            </div><br><br>
+        </center>
+    </div>
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ -->
+
+</div>
+<script>
+autocomplete(document.getElementById("fees-year-input-id"), years)
+autocomplete(document.getElementById("saving-year-input-id"), years)
+</script>
+</body>
+</html>
+

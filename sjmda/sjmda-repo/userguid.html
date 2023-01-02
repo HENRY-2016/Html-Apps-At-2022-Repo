@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sjmda-guid</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="static/js/main.js"></script>
+<link rel="stylesheet" type="text/css" href="static/css/main.css">
+<link rel="stylesheet" type="text/css" href="static/css/w3.css">
+<link rel="stylesheet" type="text/css" href="static/css/mediarules.css" >
+</head>
+<body class="main_body">
+
+    <div id="content-div"><!-- content-div -->
+        <div id="services-slogan-title-div-with-out-tabs">
+            <label class="services-slogan-title-label">
+                St. Joseph Men's <br>Development Association<br>
+                User Guid
+                <br>
+            </label>
+        </div>
+
+        <br>
+        <button onclick="Open_User_View_Panels('btn-1')" class="w3-button w3-block w3-blue w3-left-align">Main Menu </button>
+        <div id="btn-1" class=" user-guid-area-view w3-hide w3-container">
+            
+                
+                <label> 
+                    <img src="static/imgs/info.webp" class="home-webp-icone" >
+                </label>
+                <label class="user-guid-labels"> Click in it to view sjmda infromention</label> <br>
+        
+                <label>  
+                    <img src="static/imgs/financial.webp" class="navi-webp-icone" >
+                </label>
+                <label class="user-guid-labels"> Click in it to view your accounts details</label> <br>
+    
+                <label>  
+                    <img src="static/imgs/project.webp" class="navi-webp-icone" >
+                </label>
+                <label class="user-guid-labels"> Click in it to view sjmda projects</label> <br>
+        
+                <label>  
+                    <img src="static/imgs/pledges.webp" class="navi-webp-icone" >
+                </label>
+                <label class="user-guid-labels"> Click in it to view sjmda pledges</label> <br>
+
+                <label class="open-navigation-profile-label">
+                    <img src="static/imgs/profile.webp" class="profile-svg-img" >
+                </label>
+                <label class="user-guid-labels"> Click in it to view user profile</label> <br>
+        </div>
+
+        <button onclick="Open_User_View_Panels('btn-2')" class="w3-button w3-block w3-blue w3-left-align">User Account</button>
+        <div id="btn-2" class=" user-guid-area-view w3-hide w3-container">
+            <button class="user-guid-selecte-options-btn">Accounts</button>
+            <button class="user-guid-selecte-options-btn">Option</button><br><br>
+
+            <label class="user-guid-labels"> Click in option to; </label> <br>
+            <label class="user-guid-labels"> a). View your monthly Fees since 2021 then click in my fees</label> <br>
+			<label class="user-guid-labels"> b). View your monthly Savings by typing in the year then click in my savings</label><br>
+            <label class="user-guid-labels"> c). View Summary of Sjmda cash collection</label><br>
+            <label class="user-guid-labels"> d). View Sjdma Expenditures</label><br><br>
+        </div>
+
+        <button onclick="Open_User_View_Panels('btn-3')" class="w3-button w3-block w3-blue w3-left-align">User Profile</button>
+        <div id="btn-3" class=" user-guid-area-view w3-hide w3-container"><br>
+            <label class="open-navigation-profile-label">
+                <img src="static/imgs/profile.webp" class="profile-svg-img" >
+            </label>
+            <label class="user-guid-labels"> Click in icone then; </label> <br>
+            <label class="user-guid-labels"> a). View your details</label> <br>
+            <label class="user-guid-labels"> b). View your total Fees by clicking in my fees</label> <br>
+			<label class="user-guid-labels"> c). View your total Savings by clicking in my savings</label><br><br>
+        </div>
+
+    </div><!-- end content-div -->
+    <center>
+        <br><br>
+        <button onclick="Log_In_User ()" class="index-page-btns">Log in</button>
+    </center>
+<div id="id020" class="w3-modal">
+    <div class="w3-modal-content w3-animate-top w3-card-4">
+        <div class="w3-container">
+        <br>
+        <center><br>
+            <label id="offline-lable" class="offline-lable" > Check Connection <br> 
+            </label>
+        </center><br><br>
+        <button  onclick="document.getElementById('id020').style.display='none';" type="button" class="close-popup-label" >Close</button><br>
+        </div>		
+    </div>
+</div>
+<script>
+function Open_User_View_Panels(id) 
+{
+    var x = document.getElementById(id);
+        if (x.className.indexOf("w3-show") == -1) 
+        {
+            x.className += " w3-show";
+            x.previousElementSibling.className = 
+            x.previousElementSibling.className.replace("w3-black", "w3-red");
+            } else { 
+            x.className = x.className.replace(" w3-show", "");
+            x.previousElementSibling.className = 
+            x.previousElementSibling.className.replace("w3-red", "w3-black");
+        }
+}
+</script>
+
+</body>
+</html>
